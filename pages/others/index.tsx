@@ -38,7 +38,7 @@ const others = () => {
           <title>Other blog</title>
         </Head>
         {blogs.map((blog) => (
-          <Link href={blog.url}>
+          <Link href={blog.url} key={blog.id}>
             <div className="bg-black blue flex h10 border-bottom pointer">
               {blog.name}
             </div>

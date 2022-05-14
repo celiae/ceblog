@@ -49,7 +49,7 @@ const framework = () => {
           <title>Other blog</title>
         </Head>
         {frameworks.map((framework) => (
-          <Link href={framework.url}>
+          <Link href={framework.url} key={framework.id}>
             <div className="bg-black blue grid h10 border-bottom pointer">
               <div>{framework.name}</div>
               <div className="white">{framework.creator}</div>
