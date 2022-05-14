@@ -1,24 +1,27 @@
+:root {
+  --black: rgb(33, 33, 33);
+  --blue: rgb(28, 136, 230);
+  --lightblue: rgb(143, 194, 238);
+  --white: white;
+}
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-
 img {
   width: 30px;
 }
-
 .sticky-top {
   position: sticky;
   top: 0;
@@ -26,4 +29,67 @@ img {
 .sticky-bottom {
   position: sticky;
   bottom: 0;
+}
+.bg-white {
+  background: var(--white);
+}
+.bg-black {
+  background: var(--black);
+}
+.bg-blue {
+  background: var(--blue);
+}
+.blue {
+  color: var(--blue);
+}
+.white {
+  color: var(--white);
+}
+.black {
+  color: var(--black);
+}
+.blue-border-top {
+  border-top: 2px solid var(--blue);
+}
+.hover:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 5rem 1rem;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w6rem {
+  width: 6rem;
+  text-align: center;
+}
+.pointer {
+  cursor: pointer;
+}
+.pt1 {
+  padding-top: 1rem;
+}
+.pb1 {
+  padding-bottom: 1rem;
+}
+.mt1 {
+  margin-top: 1rem;
+}
+.mb1 {
+  margin-bottom: 1rem;
+}
+.h10 {
+  height: 10rem;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--blue);
 }

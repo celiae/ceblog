@@ -1,6 +1,5 @@
 import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
@@ -12,16 +11,15 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  // const heroPost = allPosts[0];
+  // const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
         <Head>
           <title>Ce-blog {CMS_NAME}</title>
         </Head>
-        <Intro />
-        {heroPost && (
+        {/* {heroPost && (
           <HeroPost
             title={heroPost.title}
             coverImage={heroPost.coverImage}
@@ -30,8 +28,8 @@ const Index = ({ allPosts }: Props) => {
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
           />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        )} */}
+        {allPosts.length > 0 && <MoreStories posts={allPosts} />}
       </Layout>
     </>
   );
