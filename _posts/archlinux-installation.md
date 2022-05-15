@@ -1,6 +1,7 @@
 ---
-title: "ArchLinux Installation"
-excerpt: "镜像源是下载软件包的服务器,把 China 那一块 URL 移到最上面,pacman 则会优先从 China 源下载,速度更快"
+title: "ArchLinux 安装"
+excerpt: "镜像源是下载软件包的服务器,把 China 那一块 URL 移到最上面,pacman 则会优先从 China 源下载,速度更快.关掉系统自选镜像源.
+是否为 UEFI 启动,有文件则是,空则是普通 BIOS"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2022-05-14T15:48:36.322Z"
 author:

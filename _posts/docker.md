@@ -1,5 +1,5 @@
 ---
-title: "Docker docker-compose docker-images"
+title: "Docker 简单使用"
 excerpt: "可以观察网上各种 Dockerfile.其中会包含一些其他镜像,比如 debian,nginx,mysql...这样在开发完软件之后,不需要在实际的操作系统上配置完整的环境--_像虚拟机一样_--与宿主机隔离运行.不会污染宿主机环境,减少硬件开销,节约成本."
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2020-05-14T17:46:03.322Z"
