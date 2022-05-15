@@ -9,5 +9,24 @@
 }
 .markdown code {
   font-size: 20px;
-  font-family: 'Source Code Pro';
+  font-family: "Source Code Pro";
+}
+.markdown h2 {
+  padding: 1rem 0.5rem;
+  border-bottom: 2px solid var(--blue);
+  margin: 1rem;
+}
+.markdown h3 {
+  padding: 0rem 1rem;
+  margin: 1rem;
+}
+.markdown a {
+  color: var(--blue);
+  padding: 0.5rem;
+}
+.markdown a:hover {
+  border-bottom: 1px solid var(--lightblue);
+}
+.markdown ol {
+  border-bottom: 2px solid var(--white);
 }
