@@ -4,6 +4,8 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
+import BasicPagination from "../components/BasicPagination";
+import { Box } from "@mui/material";
 
 type Props = {
   allPosts: Post[];
@@ -14,9 +16,12 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Ce-blog {CMS_NAME}</title>
+          <title>Ceblog {CMS_NAME}</title>
         </Head>
-        {allPosts.length > 0 && <MoreStories posts={allPosts} />}
+        <Box mt={3}>
+          {allPosts.length > 0 && <MoreStories posts={allPosts} />}
+          <BasicPagination />
+        </Box>
       </Layout>
     </>
   );

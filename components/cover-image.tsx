@@ -1,4 +1,3 @@
-import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,17 +12,14 @@ const CoverImage = ({ title, src, slug }: Props) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
-      })}
-      width={320}
-      height={100}
+      width={160}
+      height={90}
       objectFit="contain"
       quality={100}
     />
   );
   return (
-    <div className="flex">
+    <>
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a aria-label={title}>{image}</a>
@@ -31,7 +27,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
       ) : (
         image
       )}
-    </div>
+    </>
   );
 };
 
