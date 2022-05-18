@@ -16,9 +16,9 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <CoverImage title={title} src={coverImage} />
       <Avatar alt={author.name} src={author.picture} />
       <DateFormatter dateString={date} />
+      <CoverImage title={title} src={coverImage} />
     </>
   );
 };

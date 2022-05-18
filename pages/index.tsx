@@ -1,11 +1,10 @@
-import MoreStories from "../components/more-stories";
+import AllStories from "../components/all-stories";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
 import BasicPagination from "../components/BasicPagination";
-import { Box } from "@mui/material";
 
 type Props = {
   allPosts: Post[];
@@ -13,17 +12,14 @@ type Props = {
 
 const Index = ({ allPosts }: Props) => {
   return (
-    <>
-      <Layout>
+    <Layout>
+      <>
         <Head>
           <title>Ceblog {CMS_NAME}</title>
         </Head>
-        <Box mt={3}>
-          {allPosts.length > 0 && <MoreStories posts={allPosts} />}
-          <BasicPagination />
-        </Box>
-      </Layout>
-    </>
+        {allPosts.length > 0 && <AllStories posts={allPosts} />}
+      </>
+    </Layout>
   );
 };
 

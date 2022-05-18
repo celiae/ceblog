@@ -1,6 +1,6 @@
 ---
 title: "Git Github 开发角度"
-excerpt: "将项目里的所有文件(-A)添加到暂存区(stage). -A:代指当前文件夹下所有文件.接下来提交暂存区里的内容到仓库(repo)他会打开系统默认文本编辑器,根据提示写下更新注释,保存退出.如果环境变量 EDITOR=vim,他就打开 vim."
+excerpt: "项目里的所有文件添加到暂存区."
 coverImage: "/assets/blog/git-github/git.svg"
 date: "2022-05-14T19:56:57.322Z"
 author:

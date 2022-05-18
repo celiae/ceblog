@@ -1,6 +1,23 @@
+import * as React from "react";
 import Layout from "../../components/layout";
 import Head from "next/head";
 import Link from "next/link";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { Grid } from "@mui/material";
+
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+  >
+    •
+  </Box>
+);
 
 const framework = () => {
   const frameworks = [
@@ -43,21 +60,45 @@ const framework = () => {
   ];
 
   return (
-    <>
-      <Layout>
+    <Layout>
+      <>
         <Head>
           <title>Other blog</title>
         </Head>
-        {frameworks.map((framework) => (
-          <Link href={framework.url} key={framework.id}>
-            <div className="bg-black blue grid h10 border-bottom pointer">
-              <div>{framework.name}</div>
-              <div className="white">{framework.creator}</div>
-            </div>
-          </Link>
-        ))}
-      </Layout>
-    </>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          marginTop={5}
+          spacing={2}
+        >
+          {frameworks.map((framework) => (
+            <Grid item>
+              <Card sx={{ minWidth: 275 }} key={framework.id}>
+                <CardContent>
+                  <Typography variant="h5" component="div">
+                    {framework.name}
+                  </Typography>
+                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    {framework.creator}
+                  </Typography>
+                  <Typography variant="body2">
+                    well meaning and kindly.
+                    <br />
+                    {'"a benevolent smile"'}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Link href={framework.url}>
+                    <Button size="small">Learn More</Button>
+                  </Link>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </>
+    </Layout>
   );
 };
 

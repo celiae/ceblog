@@ -1,4 +1,5 @@
 import FixedBottomNavigation from "./FixedBottomNavigation";
+import AppBarWithSearchField from "./app-bar-with-search";
 import Meta from "./meta";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
@@ -20,7 +21,7 @@ const theme = createTheme({
     info: {
       main: "#0088ef",
       dark: "#0047ab",
-      light:"#87cafe"
+      light: "#87cafe",
     },
     text: {
       primary: "#ffffff",
@@ -32,16 +33,15 @@ const theme = createTheme({
 
 type Props = {
   preview?: boolean;
-  children: React.ReactNode;
+  children: React.ReactElement;
 };
 
 const Layout = ({ preview, children }: Props) => {
   return (
     <ThemeProvider theme={theme}>
       <Meta />
-      <div className="min-h-screen">
-        <main>{children}</main>
-      </div>
+      <AppBarWithSearchField />
+      {children}
       <FixedBottomNavigation />
     </ThemeProvider>
   );
