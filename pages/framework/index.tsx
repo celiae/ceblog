@@ -73,8 +73,8 @@ const framework = () => {
           spacing={2}
         >
           {frameworks.map((framework) => (
-            <Grid item>
-              <Card sx={{ minWidth: 275 }} key={framework.id}>
+            <Grid item key={framework.id}>
+              <Card sx={{ minWidth: 275 }}>
                 <CardContent>
                   <Typography variant="h5" component="div">
                     {framework.name}
