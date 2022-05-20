@@ -10,6 +10,8 @@ ogImage:
   url: "/assets/blog/docker/docker.svg"
 ---
 
+---
+
 ## 1. Docker 开发角度
 
 代码当中一般有两种文件
@@ -28,6 +30,8 @@ ogImage:
 ```sh
 docker run -d --name=code-server -p8080:80
 ```
+
+---
 
 ## 2. 运行 code-server
 
@@ -81,7 +85,7 @@ services:
 
 以上代码来自[linuxserver/code-server](https://hub.docker.com/r/linuxserver/code-server)
 
-修改文件比修改命令更容易
+## 修改文件比修改命令更容易
 
 ## 3. 构建自己的镜像 & 同步到 dockerhub
 
@@ -133,3 +137,5 @@ services:
    ```
 
    _-d 运行在 daemon 后台_
+
+---

@@ -11,6 +11,10 @@ ogImage:
 catagory: "linux"
 ---
 
+## 安装 ArchLinux 完整过程
+
+---
+
 下载 ArchLinux 系统.iso 文件
 
 ```sh
@@ -139,7 +143,7 @@ pacstrap /mnt
         base base-devel linux linux-firmware grub os-prober\
         networkmanager efibootmgr bash-completion\
         archlinux-keyring openssh vim\
-        gnome gnome-tweaks gnome-keyring ibus ibus-libpinyin\
+        gnome gnome-tweaks gnome-keyring ibus ibus-rime\
         git firefox jdk-openjdk mariadb man-pages tcpdump yarn
         #(os-prober是双系统需要下载的包)
 ```
@@ -234,3 +238,146 @@ exit
 ```sh
 reboot
 ```
+
+[ArchLinux Wiki](https://wiki.archlinux.org/) 有更全面的知识.
+
+---
+
+## GNOME 桌面
+
+- ### 个人电脑用桌面很舒服
+
+  一般 Linux 运行在服务器上,而服务器不需要桌面提供友好界面.例如在云服务器里的 Linux 只用命令行执行脚本负责开启一个容器或服务即可;可在个人电脑,光用 vim 写代码可能有点费手.在软件工程里讲究的就是重用模块,有的操作不必每次都要敲命令.个人观点,图形界面从某种意义上讲也是重用模块,解偶,减少重复工作.
+
+- ### 我喜欢 GNOME 的地方
+
+  1. Gnome 的系统设置简洁,易用.可以轻易设置系统代理,一般应用都会走 GNOME 系统代理.Code-OSS,Firefox...
+
+  2. UI,图标很酷,感觉界面文字描述言简意赅.
+
+  3. gnome-terminal 用的很爽,我喜欢暗色主题,对眼镜好.terminal 可以设置系统主题,同样是黑色.
+
+  4. 虚拟机管理器 box 结合 qemu 后端玩虚拟机也可.
+
+#### 总之就是简单漂亮,其他桌面比如 KDE-plasma,xfce 也很好.找到自己口味快乐就完事了
+
+---
+
+## NetworkManager WIFI 联网
+
+先启动 NetworkManager,这是前提.在 archiso 安装命令行也是 ArchLinux 完整安装过程里执行过可以跳过此步.
+
+```sh
+sudo systemctl enable --now NetworkManager
+```
+
+两种方式:
+
+1. 安装 GNOME 桌面,点点点操作(图形界面)
+2. nmcli(终端界面)
+
+   联网
+
+   ```sh
+    nmcli dev wifi con "Cafe Hotspot 1" \
+    password caffeine name "My cafe"
+   ```
+
+   查看具体手册
+
+   ```sh
+   man nmcli
+   ```
+
+---
+
+## Firefox 浏览器
+
+Gasdfasdf
+
+- ### 代理
+
+  一般默认走系统代理,也就是 GNOME 系统设置(settings)里 Network 设置.
+
+- ### 看类似经济学人(The Economist),纽约时报(NY Time)的外刊
+
+  一般这种外刊试看一个月或者一定时间后会开始收费,而且价格不菲,用的都是刀乐儿$.
+  可以使用一个开源插件[bypass-paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome).支持 Firefox 和 Chrome 浏览器.教程官网有.
+
+---
+
+## yay - AUR helper (AUR 包管理器)
+
+基于 ArchLinux 的发行版有 pacman 做为核心的包管理器,里面收录的都是开源软件(仅仅只是免费但不开源的软件一般都没有),比如其中有[mariadb](https://mariadb.org/documentation/),但没有 [mysql](https://dev.mysql.com/doc/).
+
+### yay 安装过程
+
+- 安装 ArchLinux 的基本开发环境作为依赖,在 ArchLinux 完整安装过程中可能安装过
+
+  ```sh
+  pacman -S --needed git base-develGasdfasdf
+  ```
+
+- 从 ArchLinux 官方下载 yay 原始包
+
+  ```sh
+  git clone https://aur.archlinux.org/yay.git
+  ```
+
+- 进入目录
+
+  ```sh
+  cd yay
+  ```
+
+- 利用 ArchLinux 的工具"makepkg"安装 yay
+
+  ```sh
+  makepkg -si
+  ```
+
+- yay 更新系统(pacman+AUR)
+
+  ```sh
+  yay
+  ```
+
+- pacman 更新系统(pacman)
+
+  ```sh
+  sudo pacman -Syu
+  ```
+
+当然能用开源用开源,喜欢就好.
+
+[yay 在 Github ](https://github.com/Jguer/yay)
+
+---
+
+## Code-OSS
+
+人们熟知 vscode 是当今很流行的代码编辑器,而 Code-OSS 则是它的开源版本.它们之间的关系就好比 chrome 与 chromium 的关系,可能我的理解有误,没有仔细了解过.[这篇文章](https://carlchenet.com/you-think-the-visual-studio-code-binary-you-use-is-a-free-software-think-again/) 关于 vscode 写的很细.
+
+### 安装 Code-OSS
+
+- 用 pacman 安装
+
+  ```sh
+    sudo pacman -S code
+  ```
+
+  _当然安装的是开源版本 Code-OSS,而不是 VScode_
+
+Code-OSS 默认的插件源不是 VSCode 插件源,需要的化可以安装 code-marketplace
+
+- 使用 VSCode 插件源
+
+  ```sh
+  yay -S code-marketplace
+  ```
+
+---
+
+### Github Copilot 貌似不能运行在 Code-OSS 上
+
+AI 代码补全 Github Copilot 好似不兼容 Code-OSS
