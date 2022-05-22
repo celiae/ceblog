@@ -1,7 +1,7 @@
 ---
 title: "Git Github 开发角度"
 excerpt: "项目里的所有文件添加到暂存区."
-coverImage: "/assets/blog/git-github/git.svg"md
+coverImage: "/assets/blog/git-github/git.svg"
 date: "2022-05-14T19:56:57.322Z"
 author:
   name: Celiae
@@ -10,13 +10,17 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
----
-
 ## Git Github 的使用方法
 
-### **官方文档**[Github Doc](https://docs.github.com)
+## Github 文档
 
-### 写完代码更新版本同步到远端的流程
+[Github Doc](https://docs.github.com)
+
+## Git 文档
+
+[Git Pro](https://)
+
+## 写完代码更新版本同步到远端的流程
 
 | Git          | Github       |
 | ------------ | ------------ |
@@ -69,8 +73,6 @@ ogImage:
    git push -u origin master:master
    ```
 
----
-
 ## tips
 
 - 配置密钥对,根据提示生成密钥对存放在指定位置,默认在~/.ssh 下
@@ -93,5 +95,3 @@ ogImage:
   ```sh
   git log
   ```
-
----

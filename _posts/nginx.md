@@ -10,8 +10,6 @@ ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
----
-
 ## 在已有 Linux 上启用 nginx
 
 1. 下载 nginx

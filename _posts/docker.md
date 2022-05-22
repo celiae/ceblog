@@ -10,8 +10,6 @@ ogImage:
   url: "/assets/blog/docker/docker.svg"
 ---
 
----
-
 ## 1. Docker 开发角度
 
 代码当中一般有两种文件
@@ -30,8 +28,6 @@ ogImage:
 ```sh
 docker run -d --name=code-server -p8080:80
 ```
-
----
 
 ## 2. 运行 code-server
 
@@ -137,5 +133,3 @@ services:
    ```
 
    _-d 运行在 daemon 后台_
-
----

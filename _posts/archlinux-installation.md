@@ -13,8 +13,6 @@ catagory: "linux"
 
 ## 安装 ArchLinux 完整过程
 
----
-
 下载 ArchLinux 系统.iso 文件
 
 ```sh
@@ -241,8 +239,6 @@ reboot
 
 [ArchLinux Wiki](https://wiki.archlinux.org/) 有更全面的知识.
 
----
-
 ## GNOME 桌面
 
 - ### 个人电脑用桌面很舒服
@@ -260,8 +256,6 @@ reboot
   4. 虚拟机管理器 box 结合 qemu 后端玩虚拟机也可.
 
 #### 总之就是简单漂亮,其他桌面比如 KDE-plasma,xfce 也很好.找到自己口味快乐就完事了
-
----
 
 ## NetworkManager WIFI 联网
 
@@ -289,11 +283,7 @@ sudo systemctl enable --now NetworkManager
    man nmcli
    ```
 
----
-
 ## Firefox 浏览器
-
-Gasdfasdf
 
 - ### 代理
 
@@ -303,8 +293,6 @@ Gasdfasdf
 
   一般这种外刊试看一个月或者一定时间后会开始收费,而且价格不菲,用的都是刀乐儿$.
   可以使用一个开源插件[bypass-paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome).支持 Firefox 和 Chrome 浏览器.教程官网有.
-
----
 
 ## yay - AUR helper (AUR 包管理器)
 
@@ -350,9 +338,7 @@ Gasdfasdf
 
 当然能用开源用开源,喜欢就好.
 
-[yay 在 Github ](https://github.com/Jguer/yay)
-
----
+[yay 在 Github](https://github.com/Jguer/yay)
 
 ## Code-OSS
 
@@ -375,8 +361,6 @@ Code-OSS 默认的插件源不是 VSCode 插件源,需要的化可以安装 code
   ```sh
   yay -S code-marketplace
   ```
-
----
 
 ### Github Copilot 貌似不能运行在 Code-OSS 上
 

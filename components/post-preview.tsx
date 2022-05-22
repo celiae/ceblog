@@ -1,6 +1,5 @@
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
@@ -28,7 +27,10 @@ const PostPreview = ({
   return (
     <CardActionArea>
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
-        <Grid sx={{ cursor: "pointer", borderBottom: "1px solid #008bf1" }} m={5}>
+        <Grid
+          sx={{ cursor: "pointer", borderBottom: "1px solid #008bf1" }}
+          m={5}
+        >
           <>
             <Typography
               variant="h4"
