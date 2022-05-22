@@ -1,6 +1,6 @@
 ---
 title: "Iptables 划水技巧"
-excerpt: "切换 root 用户,提升权限."sudo"命令敲得很累"
+excerpt: "切换 root 用户,提升权限.sudo命令敲得很累"
 coverImage: "/assets/blog/archlinux-installation/archlinux.svg"
 date: "2022-05-22T19:56:57.322Z"
 author:
