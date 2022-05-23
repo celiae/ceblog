@@ -58,6 +58,7 @@ const framework = () => {
       url: "https://expressjs.com/",
     },
   ];
+  const UI = [{ name: "Material ui", creator: "", url: "https://mui.com" }];
 
   return (
     <Layout>
@@ -83,13 +84,43 @@ const framework = () => {
                     {framework.creator}
                   </Typography>
                   <Typography variant="body2">
-                    well meaning and kindly.
+                    Web Framework
                     <br />
-                    {'"a benevolent smile"'}
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Link href={framework.url}>
+                    <Button size="small">Learn More</Button>
+                  </Link>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          marginTop={5}
+          spacing={2}
+        >
+          {UI.map((ui) => (
+            <Grid item key={ui.name}>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography variant="h5" component="div">
+                    {ui.name}
+                  </Typography>
+                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    {ui.creator}
+                  </Typography>
+                  <Typography variant="body2">
+                    UI
+                    <br />
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Link href={ui.url}>
                     <Button size="small">Learn More</Button>
                   </Link>
                 </CardActions>
