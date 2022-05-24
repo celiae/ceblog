@@ -18,11 +18,11 @@ const pages = [
   { name: "Blog", url: "/" },
   {
     name: "Others",
-    url: "others",
+    url: "/others",
   },
   {
     name: "Framework",
-    url: "framework",
+    url: "/framework",
   },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -105,7 +105,14 @@ const ResponsiveAppBar = () => {
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link href={page.url}>{page.name}</Link>
+                    <Link href={page.url}>
+                      <Button
+                        onClick={handleCloseNavMenu}
+                        sx={{ my: 2, display: "block" }}
+                      >
+                        {page.name}
+                      </Button>
+                    </Link>
                   </Typography>
                 </MenuItem>
               ))}

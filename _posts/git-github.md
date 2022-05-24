@@ -1,5 +1,5 @@
 ---
-title: "Git Github 开发角度"
+title: "Git Github 写完代码后流程"
 excerpt: "项目里的所有文件添加到暂存区."
 coverImage: "/assets/blog/git-github/git.svg"
 date: "2022-05-14T19:56:57.322Z"
@@ -12,13 +12,9 @@ ogImage:
 
 ## Git Github 的使用方法
 
-## Github 文档
+**Github 文档**[Github Doc](https://docs.github.com)
 
-[Github Doc](https://docs.github.com)
-
-## Git 文档
-
-[Git Pro](https://)
+**Git 文档**[Git Pro](https://)
 
 ## 写完代码更新版本同步到远端的流程
 
@@ -60,7 +56,7 @@ ogImage:
    ssh-add /home/ceelia/.ssh/id_ed25519
    ```
 
-6. 地址写自己的.添加远端仓库(Github),如果已添加->第 7 步
+6. 地址写自己的.添加远端仓库(Github)
 
    ```sh
    git remote add origin \

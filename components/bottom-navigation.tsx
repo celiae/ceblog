@@ -24,12 +24,6 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <Stack justifyContent="center">
-          <Chip label="Just for fun" variant="outlined" onClick={handleClick} />
-        </Stack>
-        <Stack justifyContent="center">
-          <Chip label="Welcome to Ceblog" onClick={handleClick} />
-        </Stack>
         <Link href="https://github.com/celiae">
           <BottomNavigationAction label="Gtihub" icon={<GitHubIcon />} />
         </Link>
@@ -40,6 +34,10 @@ export default function SimpleBottomNavigation() {
           <BottomNavigationAction label="Email" icon={<EmailIcon />} />
         </Link>
       </BottomNavigation>
+      <Box justifyContent="center">
+        <Chip label="Just for fun" variant="outlined" onClick={handleClick} />
+        <Chip label="Welcome to Ceblog" onClick={handleClick} />
+      </Box>
     </Box>
   );
 }
