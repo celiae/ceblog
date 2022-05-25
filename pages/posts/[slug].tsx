@@ -28,7 +28,6 @@ const Post = ({ post, morePosts, preview }: Props) => {
         <>
           <Head>
             <title>{post.title} | Ceblog</title>
-            <meta property="og:image" content={post.ogImage.url} />
           </Head>
           <PostHeader
             title={post.title}

@@ -1,7 +1,7 @@
 import * as React from "react";
+import Image from "next/image";
 import Avatar from "@mui/material/Avatar";
 import DateFormatter from "./date-formatter";
-import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
 import Author from "../types/author";
 
@@ -18,7 +18,13 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
       <PostTitle>{title}</PostTitle>
       <Avatar alt={author.name} src={author.picture} />
       <DateFormatter dateString={date} />
-      <CoverImage title={title} src={coverImage} />
+      <Image
+        src={coverImage}
+        width={500}
+        height={450}
+        objectFit="contain"
+        quality={100}
+      />
     </>
   );
 };
