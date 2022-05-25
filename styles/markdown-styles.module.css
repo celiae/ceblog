@@ -6,7 +6,7 @@
   font-size: 1.3rem;
 }
 .markdown pre {
-  background: rgb(67, 67, 67);
+  background: rgb(37, 37, 37);
   color: aliceblue;
   overflow: auto;
   padding: 10px;
@@ -16,9 +16,9 @@
   font-family: "Source Code Pro";
 }
 .markdown h2 {
-  color: #6ec1fc;
+  color: #0095ff;
   padding: 1rem 0.5rem;
-  border-top: 2px solid #6ec1fc;
+  border-top: 2px solid #004170;
   margin: 1rem;
 }
 .markdown h3 {
@@ -26,11 +26,11 @@
   margin: 1rem;
 }
 .markdown a {
-  color: var(--blue);
+  color: #004170;
   padding: 0.5rem;
 }
 .markdown a:hover {
-  border-bottom: 1px solid var(--lightblue);
+  color: #0070c1;
 }
 .markdown ol {
   border-bottom: 2px solid var(--white);

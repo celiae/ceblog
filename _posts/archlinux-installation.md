@@ -1,6 +1,6 @@
 ---
 title: "ArchLinux 安装"
-excerpt: "镜像源是下载软件包的服务器."
+excerpt: "Gnome桌面,Code-OSS编程,yay包管理器"
 coverImage: "/assets/blog/archlinux-installation/archlinux.svg"
 date: "2022-05-14T15:48:36.322Z"
 author:

@@ -8,6 +8,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import Stack from "@mui/material/Stack";
 import Link from "next/link";
+import Typography from "@mui/material/Typography";
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
@@ -35,8 +36,10 @@ export default function SimpleBottomNavigation() {
         </Link>
       </BottomNavigation>
       <Box justifyContent="center">
-        <Chip label="Just for fun" variant="outlined" onClick={handleClick} />
-        <Chip label="Welcome to Ceblog" onClick={handleClick} />
+        <Typography>
+          看文档首选的是具有系统阐述官方文档,它是一手的知识,Ceblog主要记录最常用的
+          <Chip label="Just for fun" variant="outlined" onClick={handleClick} />
+        </Typography>
       </Box>
     </Box>
   );

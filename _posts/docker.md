@@ -1,6 +1,6 @@
 ---
 title: "Docker 简单使用"
-excerpt: "可以观察网上各种 Dockerfile."
+excerpt: "构造镜像,运行容器,上传dockerhub"
 coverImage: "/assets/blog/docker/docker.svg"
 date: "2022-05-14T17:46:03.322Z"
 author:

@@ -4,7 +4,6 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
-import BasicPagination from "../components/BasicPagination";
 
 type Props = {
   allPosts: Post[];

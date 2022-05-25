@@ -1,6 +1,6 @@
 ---
 title: "Git Github 写完代码后流程"
-excerpt: "项目里的所有文件添加到暂存区."
+excerpt: "Git本地提交,上传Github"
 coverImage: "/assets/blog/git-github/git.svg"
 date: "2022-05-14T19:56:57.322Z"
 author:
