@@ -18,19 +18,19 @@ ogImage:
 
 - 切换 root 用户,提升权限."sudo"命令敲得很累
 
-  ```sh
+  ```console
   su
   ```
 
 - 忘记命令,看看之前怎么写的.
 
-  ```sh
+  ```console
   iptables -S
   ```
 
 - 部分结果如下,在根据 ArchWiki 配置了[Simple_stateful_firewall](https://wiki.archlinux.org/title/Simple_stateful_firewall#Prerequisites)之后就是这个效果,注意 TCP 链,这个是 ArchWiki 配置后增添了 TCP 和 UDP 链.
 
-  ```sh
+  ```console
   -A TCP -p tcp -m tcp --dport 22 -j ACCEPT
   -A TCP -p tcp -m tcp --dport 80 -j ACCEPT
   -A TCP -p tcp -m tcp --dport 443 -j ACCEPT
@@ -42,7 +42,7 @@ ogImage:
 
 - 想再开一个端口,依葫芦画瓢.
 
-  ```sh
+  ```console
   iptables -A TCP -p tcp -m tcp --dport 2222 -j ACCEPT
   ```
 
@@ -50,13 +50,13 @@ ogImage:
 
 - 查看相应链相应行数
 
-  ```sh
+  ```console
   iptables -nvL --line-numbers
   ```
 
 - 以行删除规则
 
-  ```sh
+  ```console
   iptables -D TCP 6
   ```
 

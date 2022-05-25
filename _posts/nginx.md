@@ -14,30 +14,30 @@ ogImage:
 
 1. 下载 nginx
 
-   ```sh
+   ```console
    sudo pacman -S nginx
    ```
 
 2. 启动 nginx
 
-   ```sh
+   ```console
    sudo systemctl start nginx
    ```
 
 3. 编辑 nginx 配置文件
 
-   ```sh
+   ```console
    sudo vim /etc/nginx/nginx.conf
    ```
 
 4. 测试 nginx 配置文件语法
 
-   ```sh
+   ```console
    sudo nginx -t
    ```
 
 5. 在 docker 安装 nginx
 
-   ```sh
+   ```console
    docker pull nginx
    ```

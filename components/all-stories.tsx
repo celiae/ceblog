@@ -10,23 +10,25 @@ type Props = {
 
 const AllStories = ({ posts }: Props) => {
   return (
-    <Container>
-      <Stack>
-        <Grid container spacing={1}>
-          {posts.map((post) => (
-            <PostPreview
-              key={post.slug}
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
-              slug={post.slug}
-              excerpt={post.excerpt}
-            />
-          ))}
-        </Grid>
-      </Stack>
-    </Container>
+    <>
+      <Container>
+        <Stack>
+          <Grid container spacing={1}>
+            {posts.map((post) => (
+              <PostPreview
+                key={post.slug}
+                title={post.title}
+                coverImage={post.coverImage}
+                date={post.date}
+                author={post.author}
+                slug={post.slug}
+                excerpt={post.excerpt}
+              />
+            ))}
+          </Grid>
+        </Stack>
+      </Container>
+    </>
   );
 };
 

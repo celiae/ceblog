@@ -24,48 +24,48 @@ ogImage:
 
 1. 在项目根文件夹下,新建仓库.敲完后项目文件夹产生一个.git 文件夹.
 
-   ```sh
+   ```console
    git init
    ```
 
 2. 将项目里的所有文件(-A)添加到暂存区(stage). -A:代指当前文件夹下所有文件
 
-   ```sh
+   ```console
    git add -A
    ```
 
 3. 接下来提交暂存区里的内容到仓库(repo)他会打开系统默认文本编辑器,根据提示写下更新注释,保存退出.如果环境变量 EDITOR=vim,他就打开 vim.
 
-   ```sh
+   ```console
    git commit
    ```
 
 4. 或者直接提交更新注释'message'
 
-   ```sh
+   ```console
    git commit -m 'message'
    ```
 
 5. 使用 ssh 私钥,如果没有配置密钥对 -> tips.配置密钥对
 
-   ```sh
+   ```console
    eval $(ssh-agent)
    ```
 
-   ```sh
+   ```console
    ssh-add /home/ceelia/.ssh/id_ed25519
    ```
 
 6. 地址写自己的.添加远端仓库(Github)
 
-   ```sh
+   ```console
    git remote add origin \
    git@github.com:celiae/celiae.github.io.git
    ```
 
 7. 将本地的 master(前) 分支推送到远端 master(后) 分支
 
-   ```sh
+   ```console
    git push -u origin master:master
    ```
 
@@ -73,7 +73,7 @@ ogImage:
 
 - 配置密钥对,根据提示生成密钥对存放在指定位置,默认在~/.ssh 下
 
-  ```sh
+  ```console
   ssh-keygen -t ed25519 \
   -C "<your_email>@example.com"
   ```
@@ -82,12 +82,12 @@ ogImage:
 
 - 查看状态,暂存区,仓库...
 
-  ```sh
+  ```console
   git status
   ```
 
 - 查看提交日志
 
-  ```sh
+  ```console
   git log
   ```

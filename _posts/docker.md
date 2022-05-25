@@ -25,7 +25,7 @@ ogImage:
 
 有了镜像就要启动,启动成容器运行在计算机上.但你可能需要映射端口
 
-```sh
+```console
 docker run -d --name=code-server -p8080:80
 ```
 
@@ -33,7 +33,7 @@ docker run -d --name=code-server -p8080:80
 
 假如我们运行一个 code-server,我们想给一些参数
 
-```sh
+```console
 docker run -d \
   --name=code-server \
   -e PUID=1000 \
@@ -52,13 +52,13 @@ docker run -d \
 
 显然不易维护,下次启动还复制粘贴回车运行.利用 docker-compose 读取 docker-compose.yml 文件并启动容器
 
-```sh
+```console
 docker-compose up -d
 ```
 
 默认读取当前文件夹下的 docker-compose.yml, 选项 -d 意为 daemon 使它运行在后台,每次运行容器只需这一个命令和一个配置文件 docker-compose.yml.例如 code-server 的配置文件 docker-compose.yml 可以为这样:
 
-```sh
+```console
 ---
 version: "2.1"
 services:
@@ -87,7 +87,7 @@ services:
 
 1. 假如写好了代码,通过网络搜索相应框架的 Dockerfile 模板,稍作更改于是
 
-   ```sh
+   ```console
    docker build -t celiae/ceblog:latest .
    ```
 
@@ -95,7 +95,7 @@ services:
 
 2. 端口映射,run
 
-   ```sh
+   ```console
    docker run -p 1024:3000 celiae/ceblog:latest
    ```
 
@@ -103,7 +103,7 @@ services:
 
 3. 刚刚 run 的容器
 
-   ```sh
+   ```console
    docker ps -a
    ```
 
@@ -111,7 +111,7 @@ services:
 
 4. 觉得 OK 后推到 dockerhub
 
-   ```sh
+   ```console
    docker push celiae/ceblog:latest
    ```
 
@@ -119,7 +119,7 @@ services:
 
 5. 在你的服务器上获取镜像
 
-   ```sh
+   ```console
    docker pull celiae/ceblog:latest
    ```
 
@@ -127,7 +127,7 @@ services:
 
 6. 服务器上运行镜像
 
-   ```sh
+   ```console
    docker run -d -p 1024:3000 \
    celiae/ceblog:latest
    ```

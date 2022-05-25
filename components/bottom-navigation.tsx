@@ -6,7 +6,6 @@ import Chip from "@mui/material/Chip";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
-import Stack from "@mui/material/Stack";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
 
@@ -17,30 +16,36 @@ export default function SimpleBottomNavigation() {
   };
 
   return (
-    <Box>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <Link href="https://github.com/celiae">
-          <BottomNavigationAction label="Gtihub" icon={<GitHubIcon />} />
-        </Link>
-        <Link href="https://twitter.com/ceeliatt">
-          <BottomNavigationAction label="Twitter" icon={<TwitterIcon />} />
-        </Link>
-        <Link href="https://gmail.com">
-          <BottomNavigationAction label="Email" icon={<EmailIcon />} />
-        </Link>
-      </BottomNavigation>
-      <Box justifyContent="center">
-        <Typography>
-          看文档首选的是具有系统阐述官方文档,它是一手的知识,Ceblog主要记录最常用的
-          <Chip label="Just for fun" variant="outlined" onClick={handleClick} />
-        </Typography>
+    <>
+      <Box>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <Link href="https://github.com/celiae">
+            <BottomNavigationAction label="Gtihub" icon={<GitHubIcon />} />
+          </Link>
+          <Link href="https://twitter.com/ceeliatt">
+            <BottomNavigationAction label="Twitter" icon={<TwitterIcon />} />
+          </Link>
+          <Link href="https://gmail.com">
+            <BottomNavigationAction label="Email" icon={<EmailIcon />} />
+          </Link>
+        </BottomNavigation>
+        <Box>
+          <Typography>
+            看文档首选的是具有系统阐述官方文档,它是一手的知识,Ceblog主要记录最常用的
+            <Chip
+              label="Just for fun"
+              variant="outlined"
+              onClick={handleClick}
+            />
+          </Typography>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }

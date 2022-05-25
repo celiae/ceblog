@@ -25,38 +25,40 @@ const PostPreview = ({
   slug,
 }: Props) => {
   return (
-    <CardActionArea>
-      <Link as={`/posts/${slug}`} href="/posts/[slug]">
-        <Grid
-          sx={{ cursor: "pointer", borderBottom: "1px solid #008bf1" }}
-          m={5}
-        >
-          <>
-            <Typography
-              variant="h4"
-              component="div"
-              gutterBottom
-              sx={{ color: "text.primary" }}
-            >
-              {title}
-            </Typography>
-            <CoverImage slug={slug} title={title} src={coverImage} />
-            <Typography
-              variant="h5"
-              component="div"
-              gutterBottom
-              sx={{ color: "secondary.main" }}
-            >
-              <DateFormatter dateString={date} />
-              <Avatar alt={author.name} src={author.picture} />
-            </Typography>
-            <Typography variant="h5" component="div" gutterBottom>
-              {excerpt}
-            </Typography>
-          </>
-        </Grid>
-      </Link>
-    </CardActionArea>
+    <>
+      <CardActionArea>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+          <Grid
+            sx={{ cursor: "pointer", borderBottom: "1px solid #008bf1" }}
+            m={5}
+          >
+            <>
+              <Typography
+                variant="h4"
+                component="div"
+                gutterBottom
+                sx={{ color: "text.primary" }}
+              >
+                {title}
+              </Typography>
+              <CoverImage slug={slug} title={title} src={coverImage} />
+              <Typography
+                variant="h5"
+                component="div"
+                gutterBottom
+                sx={{ color: "secondary.main" }}
+              >
+                <DateFormatter dateString={date} />
+                <Avatar alt={author.name} src={author.picture} />
+              </Typography>
+              <Typography variant="h5" component="div" gutterBottom>
+                {excerpt}
+              </Typography>
+            </>
+          </Grid>
+        </Link>
+      </CardActionArea>
+    </>
   );
 };
 
