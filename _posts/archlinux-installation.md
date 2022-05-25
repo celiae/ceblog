@@ -1,14 +1,12 @@
 ---
 title: "ArchLinux 安装"
 excerpt: "Gnome桌面,Code-OSS编程,yay包管理器"
-coverImage: "/assets/blog/archlinux-installation/archlinux.svg"
+coverImage: "/assets/blog/archlinux-installation/archlinux.png"
 date: "2022-05-14T15:48:36.322Z"
 author:
   name: Celiae
   picture: "/assets/authors/celiae.jpg"
-ogImage:
-  url: "/assets/blog/archlinux-installtion/archlinux.svg"
-catagory: "linux"
+smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 ---
 
 ## 安装 ArchLinux 完整过程

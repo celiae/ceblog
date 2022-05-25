@@ -1,13 +1,12 @@
 ---
 title: "Iptables 划水技巧"
 excerpt: "切换 root 用户,提升权限.sudo命令敲得很累"
-coverImage: "/assets/blog/archlinux-installation/archlinux.svg"
+coverImage: "/assets/blog/iptables/iptables.png"
 date: "2022-05-22T19:56:57.322Z"
 author:
   name: Celiae
   picture: "/assets/authors/celiae.jpg"
-ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+smallImage: "/assets/blog/iptables/iptables.svg"
 ---
 
 ## 根据 ArchWiki 配置一个基础的防火墙

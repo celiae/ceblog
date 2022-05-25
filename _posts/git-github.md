@@ -1,13 +1,12 @@
 ---
 title: "Git Github 写完代码后流程"
 excerpt: "Git本地提交,上传Github"
-coverImage: "/assets/blog/git-github/git.svg"
+coverImage: "/assets/blog/git-github/git.png"
 date: "2022-05-14T19:56:57.322Z"
 author:
   name: Celiae
   picture: "/assets/authors/celiae.jpg"
-ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+smallImage: "/assets/blog/git-github/git.svg"
 ---
 
 ## Git Github 的使用方法

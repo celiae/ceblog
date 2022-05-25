@@ -1,13 +1,12 @@
 ---
 title: "Docker 简单使用"
 excerpt: "构造镜像,运行容器,上传dockerhub"
-coverImage: "/assets/blog/docker/docker.svg"
+coverImage: "/assets/blog/docker/docker.png"
 date: "2022-05-14T17:46:03.322Z"
 author:
   name: Celiae
   picture: "/assets/authors/celiae.jpg"
-ogImage:
-  url: "/assets/blog/docker/docker.svg"
+smallImage: "/assets/blog/docker/docker.svg"
 ---
 
 ## 1. Docker 开发角度

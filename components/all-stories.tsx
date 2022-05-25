@@ -23,6 +23,7 @@ const AllStories = ({ posts }: Props) => {
                 author={post.author}
                 slug={post.slug}
                 excerpt={post.excerpt}
+                smallImage={post.smallImage}
               />
             ))}
           </Grid>

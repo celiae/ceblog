@@ -1,8 +1,8 @@
 import * as React from "react";
+import Image from "next/image";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import DateFormatter from "./date-formatter";
-import CoverImage from "./cover-image";
 import Link from "next/link";
 import Author from "../types/author";
 import { CardActionArea, Grid } from "@mui/material";
@@ -14,6 +14,7 @@ type Props = {
   excerpt: string;
   author: Author;
   slug: string;
+  smallImage: string;
 };
 
 const PostPreview = ({
@@ -23,6 +24,7 @@ const PostPreview = ({
   excerpt,
   author,
   slug,
+  smallImage,
 }: Props) => {
   return (
     <>
@@ -33,15 +35,25 @@ const PostPreview = ({
             m={5}
           >
             <>
-              <Typography
-                variant="h4"
-                component="div"
-                gutterBottom
-                sx={{ color: "text.primary" }}
-              >
-                {title}
-              </Typography>
-              <CoverImage slug={slug} title={title} src={coverImage} />
+              <Grid>
+                <Typography
+                  variant="h4"
+                  component="div"
+                  gutterBottom
+                  sx={{ color: "text.primary" }}
+                >
+                  {title}
+                </Typography>
+                <Image src={smallImage} width={75} height={35} />
+              </Grid>
+              <Image
+                src={coverImage}
+                alt={`Cover Image for ${title}`}
+                width={260}
+                height={160}
+                objectFit="contain"
+                quality={100}
+              />
               <Typography
                 variant="h5"
                 component="div"

@@ -37,7 +37,7 @@ export default function SimpleBottomNavigation() {
         </BottomNavigation>
         <Box>
           <Typography>
-            看文档首选的是具有系统阐述官方文档,它是一手的知识,Ceblog主要记录最常用的
+            看文档首选的是具有系统阐述官方文档,它是一手的知识,Ceblog主要记录自己最常用的
           </Typography>
           <Chip label="Just for fun" variant="outlined" onClick={handleClick} />
         </Box>
