@@ -38,12 +38,8 @@ export default function SimpleBottomNavigation() {
         <Box>
           <Typography>
             看文档首选的是具有系统阐述官方文档,它是一手的知识,Ceblog主要记录最常用的
-            <Chip
-              label="Just for fun"
-              variant="outlined"
-              onClick={handleClick}
-            />
           </Typography>
+          <Chip label="Just for fun" variant="outlined" onClick={handleClick} />
         </Box>
       </Box>
     </>
