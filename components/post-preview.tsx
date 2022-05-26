@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import DateFormatter from "./date-formatter";
 import Link from "next/link";
 import Author from "../types/author";
-import { CardActionArea, Grid, Card } from "@mui/material";
+import { CardActionArea, Grid, Paper } from "@mui/material";
 
 type ImageTitle = {
   title: string;
@@ -85,34 +85,44 @@ const PostPreview = ({
 }: Props) => {
   return (
     <>
-      <CardActionArea>
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <Grid
-            sx={{ cursor: "pointer", borderBottom: "1px solid #008bf1" }}
-            m={3}
-          >
-            <Grid container spacing={4}>
-              <Grid item>
-                <Image
-                  src={coverImage}
-                  alt={`Cover Image for ${title}`}
-                  width={260}
-                  height={160}
-                  objectFit="contain"
-                  quality={100}
-                />
+      <Paper
+        sx={{
+          borderLeft: "5px solid #008bf1",
+          width: "100%",
+          marginBottom: "1rem",
+        }}
+      >
+        <CardActionArea>
+          <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <Grid
+              sx={{
+                cursor: "pointer",
+              }}
+              m={3}
+            >
+              <Grid container spacing={4}>
+                <Grid item>
+                  <Image
+                    src={coverImage}
+                    alt={`Cover Image for ${title}`}
+                    width={260}
+                    height={160}
+                    objectFit="contain"
+                    quality={100}
+                  />
+                </Grid>
+                <Grid item>
+                  <ImageTitle title={title} smallImage={smallImage} />
+                  <DateAuthor date={date} author={author} />
+                </Grid>
               </Grid>
-              <Grid item>
-                <ImageTitle title={title} smallImage={smallImage} />
-                <DateAuthor date={date} author={author} />
-              </Grid>
+              <Typography variant="h5" component="div" gutterBottom>
+                {excerpt}
+              </Typography>
             </Grid>
-            <Typography variant="h5" component="div" gutterBottom>
-              {excerpt}
-            </Typography>
-          </Grid>
-        </Link>
-      </CardActionArea>
+          </Link>
+        </CardActionArea>
+      </Paper>
     </>
   );
 };
