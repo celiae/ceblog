@@ -10,7 +10,7 @@ import BottomNavigation from "./bottom-navigation";
 import Meta from "./meta";
 
 type Layout = {
-  // preview?: boolean;
+  preview?: boolean;
   children: React.ReactElement;
 };
 
@@ -59,7 +59,7 @@ function ScrollTop(props: ScrollTop) {
     </Zoom>
   );
 }
-const Layout = ({ children }: Layout, { props }: ScrollTop) => {
+const Layout = ({ preview, children }: Layout, { props }: ScrollTop) => {
   return (
     <>
       <Meta />
