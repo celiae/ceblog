@@ -1,5 +1,5 @@
 ---
-title: "mariadb 安装,改密码,查询"
+title: "Mariadb"
 excerpt: "安装 mariadb,创建用户"
 coverImage: "/assets/blog/mariadb/mariadb.png"
 date: "2022-05-25T19:56:57.322Z"

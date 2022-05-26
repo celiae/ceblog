@@ -1,5 +1,5 @@
 ---
-title: "NetworkManager WIFI 联网"
+title: "NetworkManager"
 excerpt: "先启动 NetworkManager,这是前提."
 coverImage: "/assets/blog/network-manager/network-manager.png"
 date: "2022-05-26T15:48:36.322Z"

@@ -1,5 +1,5 @@
 ---
-title: "yay - AUR helper (AUR 包管理器)"
+title: "yay - 包管理器"
 excerpt: "基于 ArchLinux 的发行版有 pacman 做为核心的包管理器"
 coverImage: "/assets/blog/yay/yay.png"
 date: "2022-05-26T15:48:36.322Z"

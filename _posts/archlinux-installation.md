@@ -1,5 +1,5 @@
 ---
-title: "安装 ArchLinux 完整过程"
+title: "安装 ArchLinux"
 excerpt: "在实体机器上安装ArchLinux "
 coverImage: "/assets/blog/archlinux-installation/archlinux.png"
 date: "2022-05-14T15:48:36.322Z"
