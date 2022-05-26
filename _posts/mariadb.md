@@ -6,7 +6,7 @@ date: "2022-05-25T19:56:57.322Z"
 author:
   name: Celiae
   picture: "/assets/authors/celiae.jpg"
-smallImage: "/assets/blog/mariadb/mariadb.svg"
+smallImage: "/assets/blog/mariadb/mariadb-icon.svg"
 ---
 
 ## ArchWiki
