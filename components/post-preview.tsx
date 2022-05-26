@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import DateFormatter from "./date-formatter";
 import Link from "next/link";
 import Author from "../types/author";
-import { CardActionArea, Grid } from "@mui/material";
+import { CardActionArea, Grid, Card } from "@mui/material";
 
 type Props = {
   title: string;

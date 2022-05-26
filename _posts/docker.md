@@ -6,7 +6,7 @@ date: "2022-05-14T17:46:03.322Z"
 author:
   name: Celiae
   picture: "/assets/authors/celiae.jpg"
-smallImage: "/assets/blog/docker/docker.svg"
+smallImage: "/assets/blog/docker/docker-icon.svg"
 ---
 
 ## 1. Docker 开发角度

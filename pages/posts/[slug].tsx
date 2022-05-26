@@ -8,6 +8,7 @@ import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
+import { Container } from "@mui/material";
 
 type Props = {
   post: PostType;
@@ -29,13 +30,15 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <Head>
             <title>{post.title} | Ceblog</title>
           </Head>
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={post.content} />
+          <Container>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+            />
+            <PostBody content={post.content} />
+          </Container>
         </>
       )}
     </Layout>

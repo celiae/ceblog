@@ -6,7 +6,7 @@ date: "2022-05-14T19:56:57.322Z"
 author:
   name: Celiae
   picture: "/assets/authors/celiae.jpg"
-smallImage: "/assets/blog/git-github/git.svg"
+smallImage: "/assets/blog/git-github/git-icon.svg"
 ---
 
 ## Git Github 的使用方法
