@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Container, Grid, Typography } from "@mui/material";
 import { CopyrightOutlined } from "@mui/icons-material";
 
-const msg = `看文档首选的是具有系统阐述官方文档,它是一手的知识,Ceblog主要记录自己最常用的`;
+const msg = `官方文档具有系统阐述,它是一手的知识,学习资料的首选.Ceblog主要记录自己最常用的`;
 const copyright = `Copyright `;
 const this_year = new Date().getFullYear();
 const author = `ChengLiang`;
@@ -42,21 +42,21 @@ export default function SimpleBottomNavigation() {
           <Grid item>
             <Link href="https://github.com/celiae">
               <Button variant="contained" endIcon={<GitHubIcon />}>
-                Send
+                Github
               </Button>
             </Link>
           </Grid>
           <Grid item>
             <Link href="https://twitter.com/ceeliatt">
               <Button variant="contained" endIcon={<TwitterIcon />}>
-                Send
+                Twitter
               </Button>
             </Link>
           </Grid>
           <Grid item>
             <Link href="https://gmail.com">
               <Button variant="contained" endIcon={<EmailIcon />}>
-                Send
+                Email
               </Button>
             </Link>
           </Grid>
