@@ -5,7 +5,7 @@ import Link from "next/link";
 import page from "../types/page";
 
 type Props = {
-  pages: Array<page>;
+  pages: page[];
 };
 
 const MobileHeaderLink = ({ pages }: Props) => {

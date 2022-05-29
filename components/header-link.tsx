@@ -9,7 +9,7 @@ import page from "../types/page";
 import Link from "next/link";
 
 type Props = {
-  pages: Array<page>;
+  pages: page[];
 };
 
 const HeaderLink = ({ pages }: Props) => {

@@ -5,14 +5,17 @@ import { Grid, Stack } from "@mui/material";
 
 type Props = {
   posts: Post[];
+  page: number;
 };
 
-const AllStories = ({ posts }: Props) => {
+const AllStories = ({ posts, page }: Props) => {
+  const index = (page - 1) * 3;
+  const result = posts.slice(index, index + 3);
   return (
     <>
       <Stack>
         <Grid container spacing={1}>
-          {posts.map((post) => (
+          {result.map((post) => (
             <PostPreview
               key={post.slug}
               title={post.title}

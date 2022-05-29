@@ -15,6 +15,10 @@ type Props = {
 };
 
 const Index = ({ allPosts }: Props) => {
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
   return (
     <Layout>
       <Container>
@@ -22,10 +26,16 @@ const Index = ({ allPosts }: Props) => {
           <title>Ceblog {CMS_NAME}</title>
         </Head>
 
-        {allPosts.length > 0 && <AllStories posts={allPosts} />}
+        <AllStories posts={allPosts} page={page} />
         <Grid container>
           <Grid item sx={{ m: "auto" }}>
-            <Pagination count={allPosts.length / 5} color="primary" />
+            <Pagination
+              count={Math.ceil(allPosts.length / 3)}
+              defaultPage={1}
+              page={page}
+              onChange={handleChange}
+              color="primary"
+            />
           </Grid>
         </Grid>
         <VerticalLinearStepper />
