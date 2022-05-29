@@ -9,7 +9,9 @@ import { Container } from "@mui/system";
 import * as React from "react";
 import Pagination from "@mui/material/Pagination";
 import Grid from "@mui/material/Grid";
-
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
+import { Typography } from "@mui/material";
 type Props = {
   allPosts: Post[];
 };
@@ -38,7 +40,19 @@ const Index = ({ allPosts }: Props) => {
             />
           </Grid>
         </Grid>
-        <VerticalLinearStepper />
+        <Grid container mt={5}>
+          <Grid item xs={8}>
+            <VerticalLinearStepper />
+          </Grid>
+          <Grid item xs={4}>
+            <Stack spacing={1}>
+              <Typography variant="h5" component="legend">
+                评价
+              </Typography>
+              <Rating name="size-large" defaultValue={2} size="large" />
+            </Stack>
+          </Grid>
+        </Grid>
       </Container>
     </Layout>
   );
