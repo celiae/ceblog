@@ -2,11 +2,11 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
-import HeaderIcon from "./header-icon";
 import MobileHeaderIcon from "./mobile-header-icon";
 import HeaderUser from "./header-user";
 import HeaderLink from "./header-link";
 import MobileHeaderLink from "./mobile-header-link";
+import HeaderIcon from "./header-icon";
 const pages = [
   { name: "Blog", url: "/" },
   {
@@ -18,8 +18,6 @@ const pages = [
     url: "/framework",
   },
 ];
-
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const AppBarMenu = () => {
   return (

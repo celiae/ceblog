@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import React from "react";
 import Typography from "@mui/material/Typography";
 import page from "../types/page";
+import Link from "next/link";
 
 type Props = {
   pages: Array<page>;
@@ -53,9 +54,11 @@ const HeaderLink = ({ pages }: Props) => {
           }}
         >
           {pages.map((page) => (
-            <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-              <Typography textAlign="center">{page.name}</Typography>
-            </MenuItem>
+            <Link key={page.name} href={page.url}>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">{page.name}</Typography>
+              </MenuItem>
+            </Link>
           ))}
         </Menu>
       </Box>

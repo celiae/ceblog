@@ -4,7 +4,10 @@ import { faBlog } from "@fortawesome/free-solid-svg-icons";
 const MobileHeaderIcon = () => {
   return (
     <>
-      <Typography variant="h5" sx={{ mr: 2 }}>
+      <Typography
+        variant="h5"
+        sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+      >
         <FontAwesomeIcon icon={faBlog} />
       </Typography>
       <Typography

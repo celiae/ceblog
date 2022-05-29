@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import React from "react";
-
+import Link from "next/link";
 import page from "../types/page";
 
 type Props = {
@@ -19,13 +19,14 @@ const MobileHeaderLink = ({ pages }: Props) => {
     <>
       <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
         {pages.map((page) => (
-          <Button
-            key={page.name}
-            onClick={handleCloseNavMenu}
-            sx={{ my: 2, color: "white", display: "block" }}
-          >
-            {page.name}
-          </Button>
+          <Link key={page.name} href={page.url}>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              {page.name}
+            </Button>
+          </Link>
         ))}
       </Box>
     </>
