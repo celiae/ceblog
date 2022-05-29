@@ -11,16 +11,24 @@ smallImage: "/assets/blog/network-manager/network-manager.svg"
 
 ## NetworkManager WIFI 联网
 
-先启动 NetworkManager,这是前提.在 archiso 安装命令行也是 ArchLinux 完整安装过程里执行过可以跳过此步.
+NetworkManager 一般是桌面软件需要的联网工具
 
-```console
-sudo systemctl enable --now NetworkManager
-```
+- 安装 networkmanager 包
+
+  ```console
+  sudo pacman -S networkmanager
+  ```
+
+- 先启动 NetworkManager
+
+  ```console
+  sudo systemctl enable --now NetworkManager
+  ```
 
 ### 两种方式
 
-1. 安装 GNOME 桌面,点点点操作(图形界面)
-2. nmcli(终端界面)
+1. 图形界面 -安装 GNOME 桌面,点点点操作
+2. 终端界面 - nmcli
 
    联网
 
