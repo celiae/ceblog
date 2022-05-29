@@ -22,26 +22,20 @@ const Post = ({ post, morePosts, preview }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <>
-          <Head>
-            <title>{post.title} | Ceblog</title>
-          </Head>
-          <Container>
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
-            />
-            <PostBody content={post.content} />
-          </Container>
-        </>
-      )}
-    </Layout>
+    <>
+      <Head>
+        <title>{post.title} | Ceblog</title>
+      </Head>
+      <Container>
+        <PostHeader
+          title={post.title}
+          coverImage={post.coverImage}
+          date={post.date}
+          author={post.author}
+        />
+        <PostBody content={post.content} />
+      </Container>
+    </>
   );
 };
 

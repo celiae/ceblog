@@ -46,6 +46,7 @@ const AppBarMenu = () => {
           <HeaderLink pages={pages} />
           <MobileHeaderIcon />
           <MobileHeaderLink pages={pages} />
+
           <MuiSwitch />
           <HeaderUser />
         </Toolbar>

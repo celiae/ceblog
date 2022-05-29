@@ -21,13 +21,13 @@ const Index = ({ allPosts }: Props) => {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
+
   return (
-    <Layout>
+    <>
       <Container>
         <Head>
           <title>Ceblog {CMS_NAME}</title>
         </Head>
-
         <AllStories posts={allPosts} page={page} />
         <Grid container>
           <Grid item sx={{ m: "auto" }}>
@@ -54,7 +54,7 @@ const Index = ({ allPosts }: Props) => {
           </Grid>
         </Grid>
       </Container>
-    </Layout>
+    </>
   );
 };
 

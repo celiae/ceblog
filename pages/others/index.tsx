@@ -21,50 +21,48 @@ const others = () => {
   ];
 
   return (
-    <Layout>
-      <>
-        <Head>
-          <title>Other blog</title>
-        </Head>
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          marginTop={5}
-          spacing={2}
-        >
-          {blogs.map((blog) => (
-            <Link href={blog.url} key={blog.id}>
-              <Grid item>
-                <Card sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      // height="140"
-                      image={blog.image}
-                      alt={blog.imageAlt}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {blog.name}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {blog.description}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            </Link>
-          ))}
-        </Grid>
-      </>
-    </Layout>
+    <>
+      <Head>
+        <title>Other blog</title>
+      </Head>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        marginTop={5}
+        spacing={2}
+      >
+        {blogs.map((blog) => (
+          <Link href={blog.url} key={blog.id}>
+            <Grid item>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    // height="140"
+                    image={blog.image}
+                    alt={blog.imageAlt}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {blog.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {blog.description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    Share
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Link>
+        ))}
+      </Grid>
+    </>
   );
 };
 export default others;

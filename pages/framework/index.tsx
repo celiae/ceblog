@@ -61,75 +61,73 @@ const framework = () => {
   const UI = [{ name: "Material ui", creator: "", url: "https://mui.com" }];
 
   return (
-    <Layout>
-      <>
-        <Head>
-          <title>Other blog</title>
-        </Head>
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          marginTop={5}
-          spacing={2}
-        >
-          {frameworks.map((framework) => (
-            <Grid item key={framework.id}>
-              <Card sx={{ minWidth: 275 }}>
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    {framework.name}
-                  </Typography>
-                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    {framework.creator}
-                  </Typography>
-                  <Typography variant="body2">
-                    Web Framework
-                    <br />
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link href={framework.url}>
-                    <Button size="small">Learn More</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          marginTop={5}
-          spacing={2}
-        >
-          {UI.map((ui) => (
-            <Grid item key={ui.name}>
-              <Card sx={{ minWidth: 275 }}>
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    {ui.name}
-                  </Typography>
-                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    {ui.creator}
-                  </Typography>
-                  <Typography variant="body2">
-                    UI
-                    <br />
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link href={ui.url}>
-                    <Button size="small">Learn More</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </>
-    </Layout>
+    <>
+      <Head>
+        <title>Other blog</title>
+      </Head>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        marginTop={5}
+        spacing={2}
+      >
+        {frameworks.map((framework) => (
+          <Grid item key={framework.id}>
+            <Card sx={{ minWidth: 275 }}>
+              <CardContent>
+                <Typography variant="h5" component="div">
+                  {framework.name}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {framework.creator}
+                </Typography>
+                <Typography variant="body2">
+                  Web Framework
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Link href={framework.url}>
+                  <Button size="small">Learn More</Button>
+                </Link>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        marginTop={5}
+        spacing={2}
+      >
+        {UI.map((ui) => (
+          <Grid item key={ui.name}>
+            <Card sx={{ minWidth: 275 }}>
+              <CardContent>
+                <Typography variant="h5" component="div">
+                  {ui.name}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {ui.creator}
+                </Typography>
+                <Typography variant="body2">
+                  UI
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Link href={ui.url}>
+                  <Button size="small">Learn More</Button>
+                </Link>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
 

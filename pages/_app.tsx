@@ -1,11 +1,18 @@
 import * as React from "react";
 import type { AppProps } from "next/app";
 import "../styles/global.css";
+import Layout from "../components/layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const info = {
+    title: "Ceblog",
+    content: "Celiae likes write blog",
+  };
   return (
     <>
-      <Component {...pageProps} />
+      <Layout info={info}>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
