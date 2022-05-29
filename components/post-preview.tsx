@@ -83,6 +83,7 @@ const PostPreview = ({
   slug,
   smallImage,
 }: Props) => {
+  const [loading, setLoading] = React.useState(true);
   return (
     <>
       <Paper
