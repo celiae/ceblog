@@ -6,7 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
-import Layout from "../../components/layout";
 
 const others = () => {
   const blogs = [

@@ -1,5 +1,4 @@
 import AllStories from "../components/all-stories";
-import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";

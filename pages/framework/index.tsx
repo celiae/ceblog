@@ -1,5 +1,4 @@
 import * as React from "react";
-import Layout from "../../components/layout";
 import Head from "next/head";
 import Link from "next/link";
 import Box from "@mui/material/Box";
