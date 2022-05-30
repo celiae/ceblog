@@ -8,7 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
-import { frameworks } from "./frameworks";
+import frameworks from "./frameworks.json";
 
 const framework = () => {
   return (
