@@ -1,8 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
-import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import DateFormatter from "./date-formatter";
+import Date from "./date";
 import PostTitle from "./post-title";
 
 type Props = {
@@ -20,12 +19,8 @@ const PostHeader = ({ title, coverImage, createdate, modifydate }: Props) => {
           <PostTitle>{title}</PostTitle>
         </Grid>
       </Grid>
-      <Typography>
-        <DateFormatter dateString={createdate} />
-      </Typography>
-      <Typography>
-        <DateFormatter dateString={modifydate} />
-      </Typography>
+      <Date msg="发布日期" dateString={createdate} />
+      <Date msg="修改日期" dateString={modifydate} />
       <Image
         src={coverImage}
         width={600}

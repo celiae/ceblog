@@ -11,6 +11,7 @@ import BottomNavigation from "./bottom-navigation";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 import Meta from "./meta";
+import { Container } from "@mui/system";
 
 type Info = {
   title: string;
@@ -88,7 +89,9 @@ const Layout = (
         <AlertTitle>{info.title}</AlertTitle>
         {info.content}
       </Alert>
-      <Box sx={{ minHeight: "100vh" }}>{children}</Box>
+      <Box sx={{ minHeight: "100vh" }}>
+        <Container>{children}</Container>
+      </Box>
       <Divider />
       <BottomNavigation />
       <ScrollTop {...props}>

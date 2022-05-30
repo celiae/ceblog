@@ -6,36 +6,13 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
+import links from "./links";
 
 const others = () => {
-  const blogs = [
-    {
-      name: "ArchLinuxStudio",
-      url: "https://archlinuxstudio.github.io",
-      description: "专注于ArchLinux的技术文章",
-      image: "/assets/blog/archlinux-installation/archlinux.svg",
-      imageAlt: "ArchLinuxStudio",
-    },
-    {
-      name: "Sukka",
-      url: "https://blog.skk.moe/",
-      description: "Web技术",
-      image: "/assets/blog/archlinux-installation/archlinux.svg",
-      imageAlt: "Sukka",
-    },
-    {
-      name: "Balthild's Blog",
-      url: "https://blog.skk.moe/",
-      description: "科技文学",
-      image: "/assets/blog/archlinux-installation/archlinux.svg",
-      imageAlt: "Balthild's Blog",
-    },
-  ];
-
   return (
     <>
       <Head>
-        <title>Other blog</title>
+        <title>Links</title>
       </Head>
       <Grid
         container
@@ -44,23 +21,22 @@ const others = () => {
         marginTop={5}
         spacing={2}
       >
-        {blogs.map((blog) => (
-          <Link href={blog.url} key={blog.url}>
+        {links.map((link) => (
+          <Link href={link.url} key={link.url}>
             <Grid item>
-              <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ minWidth: 345 }}>
                 <CardActionArea>
-                  <CardMedia
+                  {/* <CardMedia
                     component="img"
-                    // height="140"
-                    image={blog.image}
-                    alt={blog.imageAlt}
-                  />
+                    image={link.image}
+                    alt={link.imageAlt}
+                  /> */}
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      {blog.name}
+                      {link.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      {blog.description}
+                      {link.description}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

@@ -15,8 +15,8 @@ import MuiSwitch from "./mui-switch";
 const pages = [
   { name: "Blog", url: "/" },
   {
-    name: "Others",
-    url: "/others",
+    name: "Links",
+    url: "/links",
   },
   {
     name: "Framework",

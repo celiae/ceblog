@@ -4,7 +4,6 @@ import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
 import VerticalLinearStepper from "../components/vertical-linear-stepper";
-import { Container } from "@mui/system";
 import * as React from "react";
 import Pagination from "@mui/material/Pagination";
 import Grid from "@mui/material/Grid";
@@ -23,36 +22,34 @@ const Index = ({ allPosts }: Props) => {
 
   return (
     <>
-      <Container>
-        <Head>
-          <title>Ceblog {CMS_NAME}</title>
-        </Head>
-        <AllStories posts={allPosts} page={page} />
-        <Grid container>
-          <Grid item sx={{ m: "auto" }}>
-            <Pagination
-              count={Math.ceil(allPosts.length / 3)}
-              defaultPage={1}
-              page={page}
-              onChange={handleChange}
-              color="primary"
-            />
-          </Grid>
+      <Head>
+        <title>Ceblog {CMS_NAME}</title>
+      </Head>
+      <AllStories posts={allPosts} page={page} />
+      <Grid container>
+        <Grid item sx={{ m: "auto" }}>
+          <Pagination
+            count={Math.ceil(allPosts.length / 3)}
+            defaultPage={1}
+            page={page}
+            onChange={handleChange}
+            color="primary"
+          />
         </Grid>
-        <Grid container mt={5}>
-          <Grid item xs={8}>
-            <VerticalLinearStepper />
-          </Grid>
-          <Grid item xs={4}>
-            <Stack spacing={1}>
-              <Typography variant="h5" component="legend">
-                评价
-              </Typography>
-              <Rating name="size-large" defaultValue={2} size="large" />
-            </Stack>
-          </Grid>
+      </Grid>
+      <Grid container mt={5}>
+        <Grid item xs={8}>
+          <VerticalLinearStepper />
         </Grid>
-      </Container>
+        <Grid item xs={4}>
+          <Stack spacing={1}>
+            <Typography variant="h5" component="legend">
+              评价
+            </Typography>
+            <Rating name="size-large" defaultValue={2} size="large" />
+          </Stack>
+        </Grid>
+      </Grid>
     </>
   );
 };
