@@ -2,10 +2,8 @@
 title: "Firefox 浏览器"
 excerpt: "看类似经济学人(The Economist),纽约时报(NY Time)的外刊"
 coverImage: "/assets/blog/firefox/firefox.png"
-date: "2022-05-26T15:48:36.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-26T15:48:36.322Z"
+modifydate: "2022-05-26T15:48:36.322Z"
 smallImage: "/assets/blog/firefox/firefox.svg"
 ---
 

@@ -3,7 +3,6 @@ import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
-import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
@@ -11,11 +10,9 @@ import { Container } from "@mui/material";
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const Post = ({ post }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -29,8 +26,8 @@ const Post = ({ post, morePosts, preview }: Props) => {
         <PostHeader
           title={post.title}
           coverImage={post.coverImage}
-          date={post.date}
-          author={post.author}
+          createdate={post.createdate}
+          modifydate={post.modifydate}
         />
         <PostBody content={post.content} />
       </Container>
@@ -49,11 +46,10 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     "title",
-    "date",
+    "createdate",
+    "modifydate",
     "slug",
-    "author",
     "content",
-    "ogImage",
     "coverImage",
   ]);
   const content = await markdownToHtml(post.content || "");

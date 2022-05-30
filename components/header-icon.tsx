@@ -1,15 +1,7 @@
 import Typography from "@mui/material/Typography";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBlog } from "@fortawesome/free-solid-svg-icons";
 const HeaderIcon = () => {
   return (
     <>
-      <Typography
-        sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-        variant="h5"
-      >
-        <FontAwesomeIcon icon={faBlog} />
-      </Typography>
       <Typography
         variant="h6"
         noWrap

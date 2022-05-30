@@ -1,11 +1,9 @@
 import * as React from "react";
 import Image from "next/image";
-import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import DateFormatter from "./date-formatter";
 import Link from "next/link";
-import Author from "../types/author";
-import { CardActionArea, Grid, Paper } from "@mui/material";
+import { CardActionArea, Grid, Paper, Stack } from "@mui/material";
 
 type ImageTitle = {
   title: string;
@@ -34,30 +32,45 @@ const ImageTitle = ({ title, smallImage }: ImageTitle) => {
   );
 };
 
-type DateAuthor = {
-  date: string;
-  author: Author;
+type Date = {
+  createdate: string;
+  modifydate: string;
 };
 
-const DateAuthor = ({ date, author }: DateAuthor) => {
+const Date = ({ createdate, modifydate }: Date) => {
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid>
         <Grid item>
           <Typography
             variant="h5"
             component="div"
             gutterBottom
-            sx={{ color: "secondary.main" }}
+            sx={{ color: "primary.main" }}
           >
-            <DateFormatter dateString={date} />
+            发布日期
           </Typography>
         </Grid>
         <Grid item>
-          <Avatar alt={author.name} src={author.picture} />
+          <Typography
+            variant="h5"
+            component="div"
+            gutterBottom
+            sx={{ color: "primary.main" }}
+          >
+            <DateFormatter dateString={createdate} />
+          </Typography>
         </Grid>
         <Grid item>
-          <Typography>{author.name}</Typography>
+          <Typography
+            variant="h5"
+            component="div"
+            gutterBottom
+            sx={{ color: "primary.main" }}
+          >
+            更新日期
+            <DateFormatter dateString={modifydate} />
+          </Typography>
         </Grid>
       </Grid>
     </>
@@ -67,9 +80,9 @@ const DateAuthor = ({ date, author }: DateAuthor) => {
 type Props = {
   title: string;
   coverImage: string;
-  date: string;
+  createdate: string;
+  modifydate: string;
   excerpt: string;
-  author: Author;
   slug: string;
   smallImage: string;
 };
@@ -77,13 +90,14 @@ type Props = {
 const PostPreview = ({
   title,
   coverImage,
-  date,
+  createdate,
+  modifydate,
   excerpt,
-  author,
   slug,
   smallImage,
 }: Props) => {
   const [loading, setLoading] = React.useState(true);
+
   return (
     <>
       <Paper
@@ -114,7 +128,7 @@ const PostPreview = ({
                 </Grid>
                 <Grid item>
                   <ImageTitle title={title} smallImage={smallImage} />
-                  <DateAuthor date={date} author={author} />
+                  <Date createdate={createdate} modifydate={modifydate} />
                 </Grid>
               </Grid>
               <Typography variant="h5" component="div" gutterBottom>

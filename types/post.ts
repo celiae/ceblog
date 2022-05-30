@@ -1,11 +1,9 @@
-import Author from "./author";
-
 type PostType = {
   slug: string;
   title: string;
-  date: string;
+  createdate: string;
+  modifydate: string;
   coverImage: string;
-  author: Author;
   excerpt: string;
   smallImage: string;
   content: string;

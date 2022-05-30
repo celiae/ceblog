@@ -2,10 +2,8 @@
 title: "NetworkManager"
 excerpt: "先启动 NetworkManager,这是前提."
 coverImage: "/assets/blog/network-manager/network-manager.png"
-date: "2022-05-26T15:48:36.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-26T15:48:36.322Z"
+modifydate: "2022-05-26T15:48:36.322Z"
 smallImage: "/assets/blog/network-manager/network-manager.svg"
 ---
 

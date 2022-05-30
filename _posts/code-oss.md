@@ -2,10 +2,8 @@
 title: "Code-OSS 编程"
 excerpt: "Code-OSS 默认的插件源不是微软的 VSCode 插件源,需要的化可以安装 AUR 包 code-marketplace"
 coverImage: "/assets/blog/code-oss/code-oss.png"
-date: "2022-05-26T15:48:36.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-26T15:48:36.322Z"
+modifydate: "2022-05-26T15:48:36.322Z"
 smallImage: "/assets/blog/code-oss/code-oss.svg"
 ---
 

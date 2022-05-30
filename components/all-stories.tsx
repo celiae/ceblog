@@ -20,8 +20,8 @@ const AllStories = ({ posts, page }: Props) => {
               key={post.slug}
               title={post.title}
               coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
+              createdate={post.createdate}
+              modifydate={post.modifydate}
               slug={post.slug}
               excerpt={post.excerpt}
               smallImage={post.smallImage}

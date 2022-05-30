@@ -2,10 +2,8 @@
 title: "Git Github 提交流程"
 excerpt: "Git本地提交,上传Github"
 coverImage: "/assets/blog/git-github/git.png"
-date: "2022-05-14T19:56:57.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-14T19:56:57.322Z"
+modifydate: "2022-05-14T19:56:57.322Z"
 smallImage: "/assets/blog/git-github/git-icon.svg"
 ---
 

@@ -2,10 +2,8 @@
 title: "Docker 简单使用"
 excerpt: "构造镜像,运行容器,上传dockerhub"
 coverImage: "/assets/blog/docker/docker.png"
-date: "2022-05-14T17:46:03.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-14T17:46:03.322Z"
+modifydate: "2022-05-14T17:46:03.322Z"
 smallImage: "/assets/blog/docker/docker-icon.svg"
 ---
 

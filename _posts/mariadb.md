@@ -2,10 +2,8 @@
 title: "Mariadb"
 excerpt: "安装 mariadb,创建用户"
 coverImage: "/assets/blog/mariadb/mariadb.png"
-date: "2022-05-25T19:56:57.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-25T19:56:57.322Z"
+modifydate: "2022-05-25T19:56:57.322Z"
 smallImage: "/assets/blog/mariadb/mariadb-icon.svg"
 ---
 

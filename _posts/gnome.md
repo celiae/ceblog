@@ -2,10 +2,8 @@
 title: "GNOME 桌面"
 excerpt: "个人电脑用桌面很舒服"
 coverImage: "/assets/blog/gnome/gnome.png"
-date: "2022-05-26T15:48:36.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-26T15:48:36.322Z"
+modifydate: "2022-05-26T15:48:36.322Z"
 smallImage: "/assets/blog/gnome/gnome.svg"
 ---
 

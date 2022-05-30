@@ -2,10 +2,8 @@
 title: "安装 ArchLinux"
 excerpt: "在实体机器上安装ArchLinux "
 coverImage: "/assets/blog/archlinux-installation/archlinux.png"
-date: "2022-05-14T15:48:36.322Z"
-author:
-  name: Celiae
-  picture: "/assets/authors/celiae.jpg"
+createdate: "2022-05-14T15:48:36.322Z"
+modifydate: "2022-05-14T15:48:36.322Z"
 smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 ---
 

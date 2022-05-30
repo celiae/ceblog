@@ -10,12 +10,25 @@ import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
 const others = () => {
   const blogs = [
     {
-      id: "0",
       name: "ArchLinuxStudio",
       url: "https://archlinuxstudio.github.io",
-      description: "非常全面的教程,我的启蒙老师",
+      description: "专注于ArchLinux的技术文章",
       image: "/assets/blog/archlinux-installation/archlinux.svg",
       imageAlt: "ArchLinuxStudio",
+    },
+    {
+      name: "Sukka",
+      url: "https://blog.skk.moe/",
+      description: "Web技术",
+      image: "/assets/blog/archlinux-installation/archlinux.svg",
+      imageAlt: "Sukka",
+    },
+    {
+      name: "Balthild's Blog",
+      url: "https://blog.skk.moe/",
+      description: "科技文学",
+      image: "/assets/blog/archlinux-installation/archlinux.svg",
+      imageAlt: "Balthild's Blog",
     },
   ];
 
@@ -32,7 +45,7 @@ const others = () => {
         spacing={2}
       >
         {blogs.map((blog) => (
-          <Link href={blog.url} key={blog.id}>
+          <Link href={blog.url} key={blog.url}>
             <Grid item>
               <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
