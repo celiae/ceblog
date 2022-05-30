@@ -1,4 +1,4 @@
-const frameworks = [
+export const frameworks = [
   {
     name: "Vue.js",
     url: "https://vuejs.org/",
@@ -28,4 +28,3 @@ const frameworks = [
     url: "https://mui.com",
   },
 ];
-export default frameworks;

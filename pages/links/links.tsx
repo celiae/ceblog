@@ -1,4 +1,4 @@
-const links = [
+export const links = [
   {
     name: "ArchLinuxStudio",
     url: "https://archlinuxstudio.github.io",
@@ -42,4 +42,3 @@ const links = [
     imageAlt: "Balthild's Blog",
   },
 ];
-export default links;
