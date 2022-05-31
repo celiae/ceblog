@@ -1,15 +1,13 @@
-import AllStories from "../components/all-stories";
+import * as React from "react";
+import AllStories from "../components/index/all-stories";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
-import VerticalLinearStepper from "../components/vertical-linear-stepper";
-import * as React from "react";
+import VerticalLinearStepper from "../components/index/vertical-linear-stepper";
 import Pagination from "@mui/material/Pagination";
 import Grid from "@mui/material/Grid";
 import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
-import { Typography } from "@mui/material";
 type Props = {
   allPosts: Post[];
 };
@@ -42,12 +40,12 @@ const Index = ({ allPosts }: Props) => {
           <VerticalLinearStepper />
         </Grid>
         <Grid item xs={4}>
-          <Stack spacing={1}>
-            <Typography variant="h5" component="legend">
-              评价
-            </Typography>
-            <Rating name="size-large" defaultValue={2} size="large" />
-          </Stack>
+          <Rating
+            name="size-large"
+            defaultValue={2}
+            size="large"
+            color="blue"
+          />
         </Grid>
       </Grid>
     </>

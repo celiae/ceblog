@@ -1,7 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
-import Date from "./date";
+import Date from "../date";
 import Link from "next/link";
 import { CardActionArea, Grid, Paper } from "@mui/material";
 

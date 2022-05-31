@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import PostBody from "../../components/post-body";
-import PostHeader from "../../components/post-header";
+import PostBody from "../../components/post/post-body";
+import PostHeader from "../../components/post/post-header";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
@@ -22,15 +22,13 @@ const Post = ({ post }: Props) => {
       <Head>
         <title>{post.title} | Ceblog</title>
       </Head>
-      <Container>
-        <PostHeader
-          title={post.title}
-          coverImage={post.coverImage}
-          createdate={post.createdate}
-          modifydate={post.modifydate}
-        />
-        <PostBody content={post.content} />
-      </Container>
+      <PostHeader
+        title={post.title}
+        coverImage={post.coverImage}
+        createdate={post.createdate}
+        modifydate={post.modifydate}
+      />
+      <PostBody content={post.content} />
     </>
   );
 };

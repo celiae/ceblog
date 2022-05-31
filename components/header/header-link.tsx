@@ -5,7 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
 import React from "react";
 import Typography from "@mui/material/Typography";
-import page from "../types/page";
+import page from "../../types/page";
 import Link from "next/link";
 
 type Props = {

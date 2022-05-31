@@ -1,6 +1,6 @@
 import * as React from "react";
-import PostPreview from "./post-preview";
-import Post from "../types/post";
+import PostPreview from "../post/post-preview";
+import Post from "../../types/post";
 import { Grid, Stack } from "@mui/material";
 
 type Props = {
