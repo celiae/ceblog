@@ -37,11 +37,11 @@ const Index = ({ allPosts }: Props) => {
           />
         </Grid>
       </Grid>
-      <Grid mt={5}>
-        <Grid xs={8}>
+      <Grid>
+        <Grid>
           <VerticalLinearStepper />
         </Grid>
-        <Grid xs={4}>
+        <Grid>
           <Rating
             name="size-large"
             defaultValue={2}

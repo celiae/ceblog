@@ -1,9 +1,9 @@
 ---
 title: "Clash"
-excerpt: "在实体机器上安装ArchLinux "
+excerpt: "创建如下配置文件"
 coverImage: "/assets/blog/clash/clash.png"
-createdate: "2022-05-14T15:48:36.322Z"
-modifydate: "2022-05-14T15:48:36.322Z"
+createdate: "2022-06-01T15:53:36.322Z"
+modifydate: "2022-06-01T16:48:36.322Z"
 smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 ---
 

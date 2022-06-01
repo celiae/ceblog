@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Container, Grid, Typography } from "@mui/material";
 import { CopyrightOutlined } from "@mui/icons-material";
 
-const msg = `官方文档具有系统阐述,它是一手的知识,学习资料的首选.Ceblog主要记录自己最常用的`;
+const msg = `官方文档具有系统阐述,它是一手的知识,学习资料的首选.Ceblog主要抄袭个人最常用的知识`;
 const copyright = `Copyright `;
 const this_year = new Date().getFullYear();
 const author = `ChengLiang`;
