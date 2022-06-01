@@ -11,7 +11,7 @@ smallImage: "/assets/blog/mariadb/mariadb-icon.svg"
 
 本文参考了[ArchWiki 上的 mariadb](https://wiki.archlinux.org/title/MariaDB)
 
-## 安装 mariadb
+### 安装 mariadb
 
 - root 提权
 
@@ -46,7 +46,7 @@ smallImage: "/assets/blog/mariadb/mariadb-icon.svg"
   mysql -u root -p
   ```
 
-## 创建用户
+### 创建用户
 
 - 新建用户
 
@@ -66,7 +66,7 @@ smallImage: "/assets/blog/mariadb/mariadb-icon.svg"
   FLUSH PRIVILEGES;
   ```
 
-## 修改密码
+### 修改密码
 
 - 跳转到"mysql"数据库
 
@@ -86,7 +86,7 @@ smallImage: "/assets/blog/mariadb/mariadb-icon.svg"
   ALTER USER 'celiae'@'localhost' IDENTIFIED BY 'new_password';
   ```
 
-## 重置 root 密码
+### 重置 root 密码
 
 - 停止 mariadb 进程
 

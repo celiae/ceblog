@@ -13,7 +13,7 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
 
 **Git 文档**[Git Pro](https://)
 
-## 写完代码更新版本同步到远端的流程
+### 写完代码更新版本同步到远端的流程
 
 | Git          | Github       |
 | ------------ | ------------ |
@@ -66,7 +66,7 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
    git push -u origin master:master
    ```
 
-## tips
+### tips
 
 - 配置密钥对,根据提示生成密钥对存放在指定位置,默认在~/.ssh 下
 

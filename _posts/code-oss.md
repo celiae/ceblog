@@ -1,9 +1,9 @@
 ---
 title: "Code-OSS 编程"
-excerpt: "Code-OSS 默认的插件源不是微软的 VSCode 插件源,需要的化可以安装 AUR 包 code-marketplace"
+excerpt: "Code-OSS 需要的化可以安装 AUR 包 code-marketplace"
 coverImage: "/assets/blog/code-oss/code-oss.png"
 createdate: "2022-05-26T15:48:36.322Z"
-modifydate: "2022-05-26T15:48:36.322Z"
+modifydate: "2022-06-01T15:48:36.322Z"
 smallImage: "/assets/blog/code-oss/code-oss.svg"
 ---
 
@@ -27,6 +27,19 @@ smallImage: "/assets/blog/code-oss/code-oss.svg"
   yay -S code-marketplace
   ```
 
-### Github Copilot 貌似不能运行在 Code-OSS 上
+### 启动 Code-OSS
 
-AI 代码补全 Github Copilot 好似不兼容 Code-OSS
+- 在终端中启动
+
+  ```console
+  code .
+  ```
+
+- 通过 Code-OSS 打开文件夹
+
+  > 文件管理器操作
+
+#### **Github Copilot 运行情况**
+
+- [x] Code-OSS
+- [ ] VScode

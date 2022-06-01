@@ -18,15 +18,13 @@ smallImage: "/assets/blog/docker/docker-icon.svg"
 | ------------------ | --------------------------------------------------------- |
 | 用来创建自定义镜像 | 用于在启动容器时(docker run)给出大量的参数,便于命令行操作 |
 
-可以观察网上各种 Dockerfile.其中会包含一些其他镜像,比如 debian,nginx,mysql...这样在开发完软件之后,不需要在实际的操作系统上配置完整的环境,像虚拟机一样与宿主机隔离运行.不会污染宿主机环境,减少硬件开销,节约成本.
-
 有了镜像就要启动,启动成容器运行在计算机上.但你可能需要映射端口
 
 ```console
 docker run -d --name=code-server -p8080:80
 ```
 
-## 2. 运行 code-server
+### 2. 运行 code-server
 
 假如我们运行一个 code-server,我们想给一些参数
 
@@ -45,7 +43,7 @@ docker run -d \
   lscr.io/linuxserver/code-server:latest
 ```
 
-以上代码来自[linuxserver/code-server](https://hub.docker.com/r/linuxserver/code-server)
+_以上代码来自[linuxserver/code-server](https://hub.docker.com/r/linuxserver/code-server)_
 
 显然不易维护,下次启动还复制粘贴回车运行.利用 docker-compose 读取 docker-compose.yml 文件并启动容器
 
@@ -53,7 +51,7 @@ docker run -d \
 docker-compose up -d
 ```
 
-默认读取当前文件夹下的 docker-compose.yml, 选项 -d 意为 daemon 使它运行在后台,每次运行容器只需这一个命令和一个配置文件 docker-compose.yml.例如 code-server 的配置文件 docker-compose.yml 可以为这样:
+默认读取当前文件夹下的 docker-compose.yml, 选项 -d 意为 daemon 使它运行在后台,每次运行容器只需这一个命令和一个配置文件 docker-compose.yml.例如给出 code-server 的配置文件 docker-compose.yml:
 
 ```console
 ---
@@ -76,11 +74,11 @@ services:
     restart: unless-stopped
 ```
 
-以上代码来自[linuxserver/code-server](https://hub.docker.com/r/linuxserver/code-server)
+_以上代码来自[linuxserver/code-server](https://hub.docker.com/r/linuxserver/code-server)_
 
-## 修改文件比修改命令更容易
+### 修改文件比修改命令更容易
 
-## 3. 构建自己的镜像 & 同步到 dockerhub
+### 3. 构建自己的镜像 & 同步到 dockerhub
 
 1. 假如写好了代码,通过网络搜索相应框架的 Dockerfile 模板,稍作更改于是
 

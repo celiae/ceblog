@@ -11,9 +11,14 @@ smallImage: "/assets/blog/firefox/firefox.svg"
 
 - ### 代理
 
-  一般默认走系统代理,也就是 GNOME 系统设置(settings)里 Network 设置.
+  1. 自带代理设置很方便
+  2. 一般默认走系统代理,比如 GNOME 系统设置(settings)里 Network 设置.
 
-- ### 看类似经济学人(The Economist),纽约时报(NY Time)的外刊
+- ### 看外刊
 
-  一般这种外刊试看一个月或者一定时间后会开始收费,而且价格不菲,用的都是刀乐儿$.
-  可以使用一个开源插件[bypass-paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome).支持 Firefox 和 Chrome 浏览器.教程官网有.
+  看一个月后收费,开源插件[bypass-paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome)能白票多数期刊网站.支持 Firefox 和 Chrome 浏览器.
+
+  - 推荐外刊网站
+
+  1. [The Economist](https://www.economist.com/)
+  2. [New York Time](https://www.nytimes.com/)

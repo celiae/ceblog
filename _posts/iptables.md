@@ -7,11 +7,13 @@ modifydate: "2022-05-22T19:56:57.322Z"
 smallImage: "/assets/blog/iptables/iptables.svg"
 ---
 
-## 根据 ArchWiki 配置一个基础的防火墙
+## Iptables
+
+### 根据 ArchWiki 配置一个基础的防火墙
 
 [Simple_stateful_firewall](https://wiki.archlinux.org/title/Simple_stateful_firewall#Prerequisites)
 
-## 开启端口
+### 开启端口
 
 - 切换 root 用户,提升权限."sudo"命令敲得很累
 
@@ -43,7 +45,7 @@ smallImage: "/assets/blog/iptables/iptables.svg"
   iptables -A TCP -p tcp -m tcp --dport 2222 -j ACCEPT
   ```
 
-## 关闭端口
+### 关闭端口
 
 - 查看相应链相应行数
 
@@ -56,11 +58,3 @@ smallImage: "/assets/blog/iptables/iptables.svg"
   ```console
   iptables -D TCP 6
   ```
-
-## 难
-
-防火墙博大精深,可以根据 ArchWiki 顺着 netfilter 官方学习.
-
-## 烦
-
-这种命令行工具 iptables 大概属于包过滤防火墙.
