@@ -81,14 +81,14 @@ const Layout = (
     <>
       <Meta />
       <AppBarMenu />
-      <Toolbar id="back-to-top-anchor" />
-      <Alert
+      <Toolbar id="back-to-top-anchor" sx={{ height: "0px" }} />
+      {/* <Alert
         severity="info"
         sx={{ position: "fixed", display: alert ? "" : "none" }}
       >
         <AlertTitle>{info.title}</AlertTitle>
         {info.content}
-      </Alert>
+      </Alert> */}
       <Box sx={{ minHeight: "100vh" }}>
         <Container>{children}</Container>
       </Box>

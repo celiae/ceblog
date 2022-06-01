@@ -8,6 +8,7 @@ import VerticalLinearStepper from "../components/index/vertical-linear-stepper";
 import Pagination from "@mui/material/Pagination";
 import Grid from "@mui/material/Grid";
 import Rating from "@mui/material/Rating";
+import SearchAppBar from "../components/index/search-bar";
 type Props = {
   allPosts: Post[];
 };
@@ -23,6 +24,7 @@ const Index = ({ allPosts }: Props) => {
       <Head>
         <title>Ceblog {CMS_NAME}</title>
       </Head>
+      <SearchAppBar />
       <AllStories posts={allPosts} page={page} />
       <Grid container>
         <Grid item sx={{ m: "auto" }}>
@@ -35,11 +37,11 @@ const Index = ({ allPosts }: Props) => {
           />
         </Grid>
       </Grid>
-      <Grid container mt={5}>
-        <Grid item xs={8}>
+      <Grid mt={5}>
+        <Grid xs={8}>
           <VerticalLinearStepper />
         </Grid>
-        <Grid item xs={4}>
+        <Grid xs={4}>
           <Rating
             name="size-large"
             defaultValue={2}

@@ -11,6 +11,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 import { useRouter } from "next/router";
 import MuiSwitch from "./mui-switch";
+import SearchAppBar from "../index/search-bar";
 
 const pages = [
   { name: "Blog", url: "/" },
