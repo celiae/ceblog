@@ -11,9 +11,6 @@ smallImage: "/assets/blog/docker/docker-icon.svg"
 
 代码当中一般有两种文件
 
-1. Dockerfile
-2. docker-compose.yml
-
 | Dockerfile         | docker-compose.yml                                        |
 | ------------------ | --------------------------------------------------------- |
 | 用来创建自定义镜像 | 用于在启动容器时(docker run)给出大量的参数,便于命令行操作 |
