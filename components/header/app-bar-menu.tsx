@@ -38,9 +38,9 @@ const AppBarMenu = () => {
   }, [router.isReady]);
   return (
     <AppBar position="sticky">
-      <Box sx={{ width: "100%", display: loading ? "" : "none" }}>
+      {/* <Box sx={{ width: "100%", display: loading ? "" : "none" }}>
         <LinearProgress />
-      </Box>
+      </Box> */}
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <HeaderIcon />

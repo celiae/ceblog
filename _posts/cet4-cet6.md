@@ -1,10 +1,10 @@
 ---
 title: "CET4 CET6及格技巧"
 excerpt: "本人分数只是刚刚及格"
-coverImage: "/assets/blog/code-oss/code-oss.png"
+coverImage: "/assets/blog/cet4-cet6/cet4.png"
 createdate: "2022-06-03T15:48:36.322Z"
 modifydate: "2022-06-03T15:48:36.322Z"
-smallImage: "/assets/blog/code-oss/code-oss.svg"
+smallImage: "/assets/blog/cet4-cet6/cet6.png"
 ---
 
 ## 四六级

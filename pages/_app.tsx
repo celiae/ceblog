@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { AppProps } from "next/app";
 import "../styles/global.css";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
