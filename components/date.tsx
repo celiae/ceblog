@@ -28,11 +28,9 @@ const Date = ({ msg, dateString }: Props) => {
               variant="h5"
               component="div"
               gutterBottom
-              sx={{ color: "primary.main" }}
+              sx={{ color: "secondary.main" }}
             >
-              <time dateTime={dateString} style={{ color: "#000" }}>
-                {format(date, "LLLL	d, yyyy")}
-              </time>
+              <time dateTime={dateString}>{format(date, "LLLL	d, yyyy")}</time>
             </Typography>
           </Grid>
         </Grid>

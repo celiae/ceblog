@@ -2,6 +2,8 @@ import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch, { SwitchProps } from "@mui/material/Switch";
 import React from "react";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { toLight, toDark } from "../../features/theme/themeSlice";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -50,22 +52,22 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 const MuiSwitch = () => {
-  const [mode, setMode] = React.useState(false);
-  //true -> dark ; false -> light
-  const handleSwitch = () => {
-    setMode(!mode);
-    console.log(mode);
+  const dispatch = useAppDispatch();
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.checked) {
+      // Change to dark mode when checked
+      dispatch(toDark());
+    } else {
+      // Reverse
+      dispatch(toLight());
+    }
   };
+
   return (
     <>
       <FormControlLabel
-        control={
-          <MaterialUISwitch
-            sx={{ m: 1 }}
-            checked={mode}
-            onClick={handleSwitch}
-          />
-        }
+        control={<MaterialUISwitch sx={{ m: 1 }} onChange={handleChange} />}
         label=""
       />
     </>

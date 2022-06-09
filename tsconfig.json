@@ -19,7 +19,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "test/components/index/all-stories.test.js"
+    "test/components/index/all-stories.test.js",
+    "context/reducer.js"
   ],
   "exclude": ["node_modules"]
 }
