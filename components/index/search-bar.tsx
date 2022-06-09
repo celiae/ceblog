@@ -53,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
-    <Toolbar sx={{ mb: 2 }}>
+    <Toolbar sx={{ mb: 2 }} id="back-to-top-anchor">
       <Search>
         <SearchIconWrapper>
           <SearchIcon />

@@ -1,7 +1,10 @@
 import Typography from "@mui/material/Typography";
+import AdbIcon from "@mui/icons-material/Adb";
+
 const HeaderIcon = () => {
   return (
     <>
+      <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
       <Typography
         variant="h6"
         noWrap

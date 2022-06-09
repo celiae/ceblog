@@ -36,6 +36,7 @@ const AppBarMenu = () => {
       handleLoadingChange();
     };
   }, [router.isReady]);
+
   return (
     <AppBar position="sticky">
       {/* <Box sx={{ width: "100%", display: loading ? "" : "none" }}>

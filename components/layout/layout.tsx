@@ -23,7 +23,7 @@ const Layout = (
     <>
       <Meta />
       <AppBarMenu />
-      <Toolbar id="back-to-top-anchor" sx={{ height: "0px" }} />
+      {/* <Toolbar  sx={{ height: "0px" }} /> */}
       <BlogAlert {...info} />
       <Box sx={{ minHeight: "100vh" }}>
         <Container>{children}</Container>

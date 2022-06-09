@@ -66,7 +66,7 @@ const MuiSwitch = () => {
             onClick={handleSwitch}
           />
         }
-        label={mode ? "DARK" : "LIGHT"}
+        label=""
       />
     </>
   );
