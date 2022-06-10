@@ -1,9 +1,9 @@
 ---
-title: "Iptables 划水技巧"
-excerpt: "切换 root 用户,提升权限.sudo命令敲得很累"
+title: "Iptables"
+excerpt: "基本防火墙"
 coverImage: "/assets/blog/iptables/iptables.png"
 createdate: "2022-05-22T19:56:57.322Z"
-modifydate: "2022-05-22T19:56:57.322Z"
+modifydate: "2022-06-10T10:44:57.322Z"
 smallImage: "/assets/blog/iptables/iptables.svg"
 ---
 

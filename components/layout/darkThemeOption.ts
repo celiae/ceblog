@@ -15,7 +15,7 @@ export const darkThemeOption: ThemeOptions = {
       main: blue[200],
     },
     secondary: {
-      main: cyan[400],
+      main: grey[50],
     },
     error: {
       main: red[500],
@@ -24,7 +24,7 @@ export const darkThemeOption: ThemeOptions = {
       main: amber[500],
     },
     info: {
-      main: cyan[500],
+      main: grey[50],
     },
     success: {
       main: green[900],

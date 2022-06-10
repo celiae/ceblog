@@ -1,9 +1,9 @@
 ---
-title: "GNOME 桌面"
-excerpt: "个人电脑用桌面很舒服"
+title: "GNOME"
+excerpt: "个人电脑用桌面"
 coverImage: "/assets/blog/gnome/gnome.png"
 createdate: "2022-05-26T15:48:36.322Z"
-modifydate: "2022-05-26T15:48:36.322Z"
+modifydate: "2022-06-10T10:52:36.322Z"
 smallImage: "/assets/blog/gnome/gnome.svg"
 ---
 

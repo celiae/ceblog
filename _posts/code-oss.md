@@ -1,6 +1,6 @@
 ---
-title: "Code-OSS 编程"
-excerpt: "Code-OSS 需要的化可以安装 AUR 包 code-marketplace"
+title: "Code-OSS"
+excerpt: "VSCode开源版本,使用前端语言编写而成的IDE"
 coverImage: "/assets/blog/code-oss/code-oss.png"
 createdate: "2022-05-26T15:48:36.322Z"
 modifydate: "2022-06-01T15:48:36.322Z"

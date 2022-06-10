@@ -1,9 +1,9 @@
 ---
-title: "nginx 网络服务软件"
+title: "Nginx"
 excerpt: "下载 nginx 编辑 nginx 配置文件"
 coverImage: "/assets/blog/nginx/nginx.png"
 createdate: "2022-05-15T14:47:47.322Z"
-modifydate: "2022-05-15T14:47:47.322Z"
+modifydate: "2022-06-10T10:40:47.322Z"
 smallImage: "/assets/blog/nginx/nginx.svg"
 ---
 

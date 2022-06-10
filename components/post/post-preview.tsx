@@ -83,8 +83,8 @@ const PostPreview = ({
                 </Grid>
                 <Grid item>
                   <ImageTitle title={title} smallImage={smallImage} />
-                  <Date msg="发布日期" dateString={createdate} />
-                  <Date msg="更改日期" dateString={modifydate} />
+                  <Date msg="更新时间" dateString={modifydate} />
+                  <Date msg="发布时间" dateString={createdate} />
                 </Grid>
               </Grid>
               <Typography variant="h5" component="div" gutterBottom>
