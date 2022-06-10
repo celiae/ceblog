@@ -246,10 +246,12 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     --efi-directory=/boot/efi --bootloader=GRUB
     ```
 
-  - 允许 grub 检测系统 GRUB_DISABLE_OS_PROBER=true true 改为 false
+  - 允许 grub 检测系统
 
     ```console
     vim /etc/default/grub
+    # GRUB_DISABLE_OS_PROBER=true,
+    # true 改为 false
     ```
 
   - 生成 grub 配置文件
