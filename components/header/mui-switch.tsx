@@ -2,8 +2,8 @@ import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch, { SwitchProps } from "@mui/material/Switch";
 import React from "react";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { toLight, toDark } from "../../features/theme/themeSlice";
+import { useAppDispatch } from "../../app/hooks";
+import { toLight, toDark } from "../../features/theme/theme-slice";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,

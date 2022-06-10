@@ -12,7 +12,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useAppSelector } from "../../app/hooks";
 import { lightThemeOption } from "./lightThemeOption";
 import { darkThemeOption } from "./darkThemeOption";
-import { Paper, Toolbar, useMediaQuery } from "@mui/material";
+import { Paper, Toolbar } from "@mui/material";
 
 interface ScrollTop {
   props: any;
@@ -25,7 +25,6 @@ const Layout = (
 ) => {
   const isDarkMode = useAppSelector((state) => state.theme.isDarkMode);
   let theme = lightTheme;
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   if (isDarkMode) {
     theme = darkTheme;
   } else {

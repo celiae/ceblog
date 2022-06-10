@@ -1,5 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "../../app/store";
 interface ThemeState {
   isDarkMode: boolean;

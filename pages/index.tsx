@@ -9,14 +9,18 @@ import Pagination from "@mui/material/Pagination";
 import Grid from "@mui/material/Grid";
 import Rating from "@mui/material/Rating";
 import SearchAppBar from "../components/index/search-bar";
+import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { toPage } from "../features/blog/blog-slice";
+
 type Props = {
   allPosts: Post[];
 };
 
 const Index = ({ allPosts }: Props) => {
-  const [page, setPage] = React.useState(1);
+  const dispatch = useAppDispatch();
+  const currentPage = useAppSelector((state) => state.blog.currentPage);
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value);
+    dispatch(toPage(value));
   };
 
   return (
@@ -25,13 +29,12 @@ const Index = ({ allPosts }: Props) => {
         <title>Ceblog {CMS_NAME}</title>
       </Head>
       <SearchAppBar />
-      <AllStories posts={allPosts} page={page} />
+      <AllStories posts={allPosts} page={currentPage} />
       <Grid container>
         <Grid item sx={{ m: "auto" }}>
           <Pagination
             count={Math.ceil(allPosts.length / 3)}
-            defaultPage={1}
-            page={page}
+            page={currentPage}
             onChange={handleChange}
             color="primary"
           />
