@@ -67,7 +67,13 @@ const MuiSwitch = () => {
   return (
     <>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} onChange={handleChange} />}
+        control={
+          <MaterialUISwitch
+            sx={{ m: 1 }}
+            onChange={handleChange}
+            defaultChecked
+          />
+        }
         label=""
       />
     </>

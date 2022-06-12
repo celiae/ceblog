@@ -1,13 +1,5 @@
 import { ThemeOptions } from "@mui/material";
-import {
-  red,
-  blue,
-  cyan,
-  grey,
-  orange,
-  amber,
-  green,
-} from "@mui/material/colors";
+import { red, blue, grey, orange, amber, green } from "@mui/material/colors";
 export const darkThemeOption: ThemeOptions = {
   palette: {
     mode: "dark",

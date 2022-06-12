@@ -2,7 +2,6 @@ import * as React from "react";
 import PostPreview from "../post/post-preview";
 import Post from "../../types/post";
 import { Grid, Stack } from "@mui/material";
-import { Box } from "@mui/system";
 
 type Props = {
   posts: Post[];

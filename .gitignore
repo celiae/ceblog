@@ -36,3 +36,6 @@ yarn-error.log*
 
 ceblog-publish
 ceblog-server
+
+deploy.c
+deploy

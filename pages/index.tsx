@@ -11,6 +11,7 @@ import Rating from "@mui/material/Rating";
 import SearchAppBar from "../components/index/search-bar";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { toPage } from "../features/blog/blog-slice";
+import Example from "./exam";
 
 type Props = {
   allPosts: Post[];
@@ -53,6 +54,7 @@ const Index = ({ allPosts }: Props) => {
           />
         </Grid>
       </Grid>
+      <Example />
     </>
   );
 };

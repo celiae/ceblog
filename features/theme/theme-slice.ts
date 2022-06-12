@@ -4,7 +4,7 @@ interface ThemeState {
   isDarkMode: boolean;
 }
 const initialState: ThemeState = {
-  isDarkMode: false,
+  isDarkMode: true,
 };
 export const themeSlice = createSlice({
   name: "isDarkMode",
