@@ -1,5 +1,4 @@
 import * as React from "react";
-import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 import AppBarMenu from "../header/app-bar-menu";
 import BottomNavigation from "../bottom-navigation";
@@ -41,7 +40,6 @@ const Layout = (
           <Box sx={{ minHeight: "100vh" }}>
             <Container>{children}</Container>
           </Box>
-          <Divider />
           <BottomNavigation />
           <ScrollTop {...props} />
         </Paper>

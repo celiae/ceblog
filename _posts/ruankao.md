@@ -57,9 +57,12 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
         [-0]补=0 0000000
 
     可得
-
     |        | 正数 | 负数         |
     | ------ | ---- | ------------ |
     | 原码 x | x    | x            |
     | 反码 y | x    | x 数值位取反 |
     | 补码 z | x    | y 数值位+1   |
+
+    在偏移2^n-1情况下,补码的符号位取反=移码
+
+

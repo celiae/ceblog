@@ -7,7 +7,7 @@ const initialState: ThemeState = {
   isDarkMode: true,
 };
 export const themeSlice = createSlice({
-  name: "isDarkMode",
+  name: "theme",
   initialState,
   reducers: {
     toLight: (state) => {

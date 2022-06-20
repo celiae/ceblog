@@ -1,7 +1,8 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
-const Example = () => {
+import { Typography } from "@mui/material";
+import { Container } from "@mui/system";
+const CeblogAnimate = () => {
   const container = {
     width: "150px",
     height: "150px",
@@ -13,8 +14,10 @@ const Example = () => {
       whileHover={{ scale: 1.2, rotate: 90 }}
       whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
     >
-      <ThreeDRotationIcon />
+      <Container>
+        <Typography align="center">Ceblog</Typography>
+      </Container>
     </motion.div>
   );
 };
-export default Example;
+export default CeblogAnimate;

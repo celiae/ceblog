@@ -5,24 +5,18 @@ import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
 import VerticalLinearStepper from "../components/index/vertical-linear-stepper";
-import Pagination from "@mui/material/Pagination";
 import Grid from "@mui/material/Grid";
-import Rating from "@mui/material/Rating";
 import SearchAppBar from "../components/index/search-bar";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
-import { toPage } from "../features/blog/blog-slice";
-import Example from "./exam";
+import CeblogAnimate from "./ceblog-animate";
+import BlogPagination from "../components/index/blog-pagination";
 
 type Props = {
   allPosts: Post[];
 };
 
 const Index = ({ allPosts }: Props) => {
-  const dispatch = useAppDispatch();
   const currentPage = useAppSelector((state) => state.blog.currentPage);
-  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    dispatch(toPage(value));
-  };
 
   return (
     <>
@@ -30,31 +24,16 @@ const Index = ({ allPosts }: Props) => {
         <title>Ceblog {CMS_NAME}</title>
       </Head>
       <SearchAppBar />
-      <AllStories posts={allPosts} page={currentPage} />
-      <Grid container>
-        <Grid item sx={{ m: "auto" }}>
-          <Pagination
-            count={Math.ceil(allPosts.length / 3)}
-            page={currentPage}
-            onChange={handleChange}
-            color="primary"
-          />
+      <Grid container spacing={2}>
+        <Grid item xs={12} lg>
+          <AllStories posts={allPosts} page={currentPage} />
+          <BlogPagination allPosts={allPosts} />
         </Grid>
-      </Grid>
-      <Grid>
-        <Grid>
+        <Grid item>
           <VerticalLinearStepper />
-        </Grid>
-        <Grid>
-          <Rating
-            name="size-large"
-            defaultValue={2}
-            size="large"
-            color="blue"
-          />
+          <CeblogAnimate />
         </Grid>
       </Grid>
-      <Example />
     </>
   );
 };
