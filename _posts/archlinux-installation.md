@@ -204,9 +204,9 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     >kde丰富花哨, gnome简洁易用, xfce不大不小
 
      ```console
-    pacstrap /mnt plasma               #kde
-    pacstrap /mnt gnome ibus ibus-rime #gnome
-    pacstrap /mnt xfce4 lightdm               #xfce
+    pacstrap /mnt plasma        #kde
+    pacstrap /mnt gnome         #gnome
+    pacstrap /mnt xfce4 lightdm #xfce
      ```
 
   - 启动时自动挂载主分区
