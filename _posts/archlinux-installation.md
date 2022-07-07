@@ -97,28 +97,14 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     iwctl
     ```
 
-  - 查看网卡
+  - 开始联网
 
     ```console
-    device list
-    ```
-
-  - 扫描 wifi
-
-    ```console
-    station wlan0 scan
-    ```
-
-  - 扫描结果
-
-    ```console
-    station device get-networks
-    ```
-
-  - 连接相应 wifi SSID 为 wifi 名
-
-    ```console
-    station device connect SSID
+    device list #查看网卡
+    station wlan0 scan #扫描 wifi
+    station device get-networks #扫描结果
+    station device connect <SSID> #连接相应 wifi SSID 为 wifi 名
+    exit #或者 Ctrl + d
     ```
 
   - 是否联网
@@ -159,26 +145,45 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
   - cfdisk 工具操作磁盘, 磁盘文件"/dev/nvme0n1"根据自己的情况进行修改
 
+    | Point         | Disk        | Size |
+    | ------------- | ----------- | ---- |
+    | /mnt/boot/efi | /dev/`sda1` | 512M |
+    |               | /dev/`sda2` | 1G   |
+    | /mnt          | /dev/`sda3` | 10G  |
+    | /mnt/home     | /dev/`sda4` |      |
+
     ```console
-    cfdisk /dev/nvme0n1
+    cfdisk /dev/sda
     ```
 
-  - 格式化主分区, btrfs/ext4/... 格式, 根据自己的情况进行修改
+    **看清自己的磁盘设备文件名,有的是`nvme0n1p1`,有的是`sda1`**
+
+  - **已有windows情况下不用这一步**,格式化 grub 启动分区
+
+    > Windows 系统自带efi分区,直接挂载即可
 
     ```console
-    mkfs.btrfs /dev/nvme0n1p2
+    mkfs.vfat /dev/sda1
     ```
 
-  - 格式化 grub 启动分区,根据自己的情况,一般不用这一步
+  - 格式化`交换分区`, swap 格式
+
+    格式化`主分区`和`用户分区`, btrfs/ext4/... 格式
 
     ```console
-    mkfs.vfat /dev/nvme0n1p1
+    mkfs.swap /dev/sda2
+    mkfs.btrfs /dev/sda3
+    mkfs.btrfs /dev/sda4
     ```
 
-  - 挂载主分区,根据自己的情况进行修改
+  - 挂载各个分区
 
     ```console
-    mount /dev/nvme0n1p2 /mnt
+    mount /dev/sda3 /mnt
+    mkdir -p /mnt/boot/efi
+    mount /dev/sda1 /mnt/boot/efi
+    mkdir /mnt/home
+    mount /dev/sda4 /mnt/home
     ```
 
   - pacstrap 安装软件包,base 是基础软件包,base-devel 是基础软件包的编译依赖,linux 是系统软件包,linux-firmware 是系统软件包的驱动,grub 是启动软件包,vim 是编辑器,dhcpcd 是网络驱动,iwd 是网络驱动,efibootmgr 是 UEFI 启动马,bash-completion 是编辑器插件,zsh 是编辑器,archlinux-keyring 是软件包签名,openssh 是网络驱动,os-prober 是双系统需要下载的包
@@ -190,12 +195,19 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
             grub efibootmgr os-prober \
             networkmanager bash-completion \
             archlinux-keyring openssh vim \
-            gnome gnome-tweaks gnome-keyring \
-            ibus ibus-rime \
             git firefox jdk-openjdk mariadb \
             man-pages tcpdump yarn
-            #(os-prober是双系统需要下载的包)
     ```
+
+    桌面安装:三选一,三条命令中任选一行,同时安装多个图形界面容易引起系统混乱
+
+    >kde丰富花哨, gnome简洁易用, xfce不大不小
+
+     ```console
+    pacstrap /mnt plasma               #kde
+    pacstrap /mnt gnome ibus ibus-rime #gnome
+    pacstrap /mnt xfce4 lightdm               #xfce
+     ```
 
   - 启动时自动挂载主分区
 
@@ -209,9 +221,18 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     arch-chroot /mnt
     ```
 
-  - 主机名设为 testhostname,bash 会显示为[root@testhostname]
+  - 生成系统语言,对 '`en_US.UTF-8`' 一行取消注释
+
+    vim /etc/locale.gen
 
     ```console
+    locale-gen
+    ```
+
+  - 配置系统语言,主机名设为 'testhostname'
+
+    ```console
+    echo 'LANG=en_US.UTF-8' > /etc/locale.conf
     echo 'testhostname' > /etc/hostname
     ```
 
@@ -227,18 +248,6 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     passwd
     ```
 
-  - 准备 grub 分区挂载点
-
-    ```console
-    mkdir /boot/efi
-    ```
-
-  - 挂载启动分区
-
-    ```console
-    mount /dev/nvme0n1p1 /boot/efi
-    ```
-
   - 安装 grub,引导程序
 
     ```console
@@ -246,12 +255,12 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     --efi-directory=/boot/efi --bootloader=GRUB
     ```
 
-  - 允许 grub 检测系统
+  - 允许 grub 检测系统. true 改为 false,并取消注释
+
+    vim /etc/default/grub
 
     ```console
-    vim /etc/default/grub
     # GRUB_DISABLE_OS_PROBER=true,
-    # true 改为 false
     ```
 
   - 生成 grub 配置文件

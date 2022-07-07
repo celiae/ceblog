@@ -9,7 +9,7 @@ smallImage: "/assets/blog/chinese-copy/copyleft-pirate.svg"
 
 ## 学习模仿
 
-### 复制别人的软件
+### 镜像软件
 
 | 国外      | 国内     |
 | --------- | -------- |
