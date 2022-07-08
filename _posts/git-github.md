@@ -21,11 +21,15 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
 
 1. 在项目根文件夹下,新建仓库.敲完后项目文件夹产生一个.git 文件夹.
 
+   >先赐予当前目录版本控制系统
+
    ```console
    git init
    ```
 
 2. 将项目里的所有文件(-A)添加到暂存区(stage). -A:代指当前文件夹下所有文件
+
+   >觉得代码写的有一定数量了
 
    ```console
    git add -A
@@ -33,17 +37,19 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
 
 3. 接下来提交暂存区里的内容到仓库(repo)他会打开系统默认文本编辑器,根据提示写下更新注释,保存退出.如果环境变量 EDITOR=vim,他就打开 vim.
 
+   >代码完成，功能测试完毕
+
    ```console
    git commit
    ```
 
-4. 或者直接提交更新注释'message'
+   或者直接提交更新注释'message'
 
    ```console
    git commit -m 'message'
    ```
 
-5. 使用 ssh 私钥,如果没有配置密钥对 -> tips.配置密钥对
+4. 使用 ssh 私钥,如果没有配置密钥对 -> tips.配置密钥对
 
    ```console
    eval $(ssh-agent)
@@ -53,14 +59,14 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
    ssh-add /home/ceelia/.ssh/id_ed25519
    ```
 
-6. 地址写自己的.添加远端仓库(Github)
+5. 地址写自己的.添加远端仓库(Github)
 
    ```console
    git remote add origin \
    git@github.com:celiae/celiae.github.io.git
    ```
 
-7. 将本地的 master(前) 分支推送到远端 master(后) 分支
+6. 将本地的 master(前) 分支推送到远端 master(后) 分支
 
    ```console
    git push -u origin master:master

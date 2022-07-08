@@ -3,7 +3,7 @@ title: "Code-OSS"
 excerpt: "VSCode开源版本,使用前端语言编写而成的IDE"
 coverImage: "/assets/blog/code-oss/code-oss.png"
 createdate: "2022-05-26T15:48:36.322Z"
-modifydate: "2022-06-01T15:48:36.322Z"
+modifydate: "2022-07-08T15:48:36.322Z"
 smallImage: "/assets/blog/code-oss/code-oss.svg"
 ---
 
@@ -35,9 +35,22 @@ smallImage: "/assets/blog/code-oss/code-oss.svg"
   code .
   ```
 
-- 通过 Code-OSS 打开文件夹
+### Python `Import`
 
-  > 文件管理器操作
+在 code-oss 导入 python 模块时，code 只会扫描`全局` pip 模块安装位置.在虚拟环境中安装的模块不会被 code 探测到.所以如果想要某个模块的代码补全,最简单的就是直接将模块安装到全局
+
+也就是:
+
+```console
+pip install scrapy
+```
+
+而不是在虚拟环境中:
+
+```console
+python3 -m venv tutorial-env
+pip install scrapy
+```
 
 #### **Github Copilot 运行情况**
 

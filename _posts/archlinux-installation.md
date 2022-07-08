@@ -107,7 +107,7 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     exit #或者 Ctrl + d
     ```
 
-  - 是否联网
+  - 检测是否联网
 
     ```console
     ping archlinux.org
@@ -131,8 +131,9 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     systemctl stop reflector.service
     ```
 
-  - 是 UEFI 启动马,有文件则是,空则是普通 BIOS
+  - 是否为 UEFI 启动,有文件则是,空则是普通 BIOS
 
+    > 目前大多数PC都是UEFI模式，所以下面的一些步骤主要针对UEFI系统的安装
     ```console
     ls /sys/firmware/efi/efivars
     ```
@@ -145,12 +146,12 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
   - cfdisk 工具操作磁盘, 磁盘文件"/dev/nvme0n1"根据自己的情况进行修改
 
-    | Point         | Disk        | Size |
+    | 挂载点         | 磁盘        | 大小 |
     | ------------- | ----------- | ---- |
-    | /mnt/boot/efi | /dev/`sda1` | 512M |
+    | /mnt/boot/efi | /dev/`sda1` | > 60M |
     |               | /dev/`sda2` | 1G   |
-    | /mnt          | /dev/`sda3` | 10G  |
-    | /mnt/home     | /dev/`sda4` |      |
+    | /mnt          | /dev/`sda3` | > 20G  |
+    | /mnt/home     | /dev/`sda4` | 剩余所有空间     |
 
     ```console
     cfdisk /dev/sda
@@ -158,7 +159,7 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
     **看清自己的磁盘设备文件名,有的是`nvme0n1p1`,有的是`sda1`**
 
-  - **已有windows情况下不用这一步**,格式化 grub 启动分区
+  - **已有windows情况下不用这一步**:格式化 grub 启动分区
 
     > Windows 系统自带efi分区,直接挂载即可
 
@@ -172,6 +173,7 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
     ```console
     mkfs.swap /dev/sda2
+    swapon /dev/sda2
     mkfs.btrfs /dev/sda3
     mkfs.btrfs /dev/sda4
     ```
@@ -199,14 +201,14 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
             man-pages tcpdump yarn
     ```
 
-    桌面安装:三选一,三条命令中任选一行,同时安装多个图形界面容易引起系统混乱
+    桌面安装:`三选一`,三条命令中任选一行,同时安装多个图形界面容易引起系统混乱
 
     >kde丰富花哨, gnome简洁易用, xfce不大不小
 
      ```console
-    pacstrap /mnt plasma        #kde
-    pacstrap /mnt gnome         #gnome
-    pacstrap /mnt xfce4 lightdm #xfce
+    pacstrap /mnt plasma
+    pacstrap /mnt gnome
+    pacstrap /mnt xfce4 lightdm lightdm-gtk-greeter
      ```
 
   - 启动时自动挂载主分区
@@ -229,23 +231,16 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
     locale-gen
     ```
 
-  - 配置系统语言,主机名设为 'testhostname'
+  - 配置系统语言.主机名设为 'testhostname'.设置 root 密码.创建用户,sudo 授权.设置时区 Region/City 可替换为 Asia/Shanghai.一些软件需要用到 LANG 环境变量,设置为 en_US.UTF-8.
 
     ```console
     echo 'LANG=en_US.UTF-8' > /etc/locale.conf
     echo 'testhostname' > /etc/hostname
-    ```
-
-  - 内核
-
-    ```console
     mkinitcpio -P
-    ```
-
-  - 设置 root 密码
-
-    ```console
     passwd
+    useradd -m testuser -G wheel && passwd testuser
+    ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+    echo 'LANG=en_US.UTF-8' > /etc/locale.conf
     ```
 
   - 安装 grub,引导程序
@@ -267,24 +262,6 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
     ```console
     grub-mkconfig -o /boot/grub/grub.cfg
-    ```
-
-  - 创建用户,sudo 授权
-
-    ```console
-    useradd -m testuser -G wheel && passwd testuser
-    ```
-
-  - 设置时区 Region/City 可替换为 Asia/Shanghai
-
-    ```console
-    ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
-    ```
-
-  - 一些软件需要用到 LANG 环境变量,设置为 en_US.UTF-8
-
-    ```console
-    echo 'LANG=en_US.UTF-8' > /etc/locale.conf
     ```
 
   - 退出硬盘系统至 iso 安装系统,或者按 Ctrl+d
