@@ -2,9 +2,9 @@ import * as React from "react";
 import type { AppProps } from "next/app";
 import "../styles/global.css";
 import Layout from "../components/layout/layout";
-import { store } from "../app/store";
+import { store } from "../lib/store";
 import { Provider } from "react-redux";
-import { IntlProvider, FormattedMessage, FormattedNumber } from "react-intl";
+import { useAppSelector } from "../lib/hooks";
 const messagesInFrench = {
   myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
 };

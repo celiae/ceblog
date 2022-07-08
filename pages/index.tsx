@@ -7,7 +7,7 @@ import Post from "../types/post";
 import VerticalLinearStepper from "../components/index/vertical-linear-stepper";
 import Grid from "@mui/material/Grid";
 import SearchAppBar from "../components/index/search-bar";
-import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { useAppSelector, useAppDispatch } from "../lib/hooks";
 import CeblogAnimate from "./ceblog-animate";
 import BlogPagination from "../components/index/blog-pagination";
 

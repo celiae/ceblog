@@ -1,8 +1,8 @@
 import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { useAppSelector, useAppDispatch } from "../../lib/hooks";
 import Post from "../../types/post";
-import { toPage } from "../../features/blog/blog-slice";
+import { toPage } from "../../state/blog-slice";
 
 type Props = {
   allPosts: Post[];

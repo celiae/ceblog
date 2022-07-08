@@ -3,6 +3,7 @@ import { styled, alpha } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
+import Button from "@mui/material/Button";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -52,6 +53,7 @@ export default function SearchAppBar() {
   ) => {
     let searchPattern = event.target.value;
   };
+
   return (
     <Toolbar sx={{ mb: 2 }}>
       <Search>
@@ -59,10 +61,12 @@ export default function SearchAppBar() {
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
+          autoFocus
           placeholder="Search…"
           onChange={startSearch}
           inputProps={{ "aria-label": "search" }}
         />
+        <Button variant="outlined">Empty</Button>
       </Search>
     </Toolbar>
   );

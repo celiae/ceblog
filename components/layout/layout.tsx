@@ -8,7 +8,7 @@ import ScrollTop from "./scroll-top";
 import BlogAlert from "./alert";
 import Layout from "../../types/layout";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useAppSelector } from "../../app/hooks";
+import { useAppSelector } from "../../lib/hooks";
 import { lightThemeOption } from "./lightThemeOption";
 import { darkThemeOption } from "./darkThemeOption";
 import { Paper, Toolbar } from "@mui/material";
