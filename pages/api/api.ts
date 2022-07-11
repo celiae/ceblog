@@ -43,3 +43,5 @@ export function getAllPosts(fields: string[] = []) {
     .sort((post1, post2) => (post1.modifydate > post2.modifydate ? -1 : 1));
   return posts;
 }
+
+// export function getPostByTitle

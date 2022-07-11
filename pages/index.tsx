@@ -1,13 +1,12 @@
 import * as React from "react";
 import AllStories from "../components/index/all-stories";
-import { getAllPosts } from "../lib/api";
+import { getAllPosts } from "./api/api";
 import Head from "next/head";
-import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
 import VerticalLinearStepper from "../components/index/vertical-linear-stepper";
 import Grid from "@mui/material/Grid";
 import SearchAppBar from "../components/index/search-bar";
-import { useAppSelector, useAppDispatch } from "../lib/hooks";
+import { useAppSelector, useAppDispatch } from "./api/hooks";
 import CeblogAnimate from "./ceblog-animate";
 import BlogPagination from "../components/index/blog-pagination";
 
@@ -21,7 +20,7 @@ const Index = ({ allPosts }: Props) => {
   return (
     <>
       <Head>
-        <title>Ceblog {CMS_NAME}</title>
+        <title>Ceblog </title>
       </Head>
       <SearchAppBar />
       <Grid container spacing={2}>

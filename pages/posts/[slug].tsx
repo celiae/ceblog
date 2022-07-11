@@ -2,9 +2,9 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import PostBody from "../../components/post/post-body";
 import PostHeader from "../../components/post/post-header";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
+import { getPostBySlug, getAllPosts } from "../api/api";
 import Head from "next/head";
-import markdownToHtml from "../../lib/markdownToHtml";
+import markdownToHtml from "../api/markdownToHtml";
 import PostType from "../../types/post";
 import { Container } from "@mui/material";
 
