@@ -28,9 +28,7 @@ const Index = ({ allPosts }: Props) => {
       <Grid container spacing={2}>
         <Grid item xs={12} lg>
           {!searchActive && <BlogPosts posts={allPosts} page={currentPage} />}
-          {searchActive && (
-            <BlogPosts posts={searchResults} page={currentPage} />
-          )}
+          {searchActive && <BlogPosts posts={searchResults} page={1} />}
           {!searchActive && <BlogPagination allPosts={allPosts} />}
         </Grid>
         <Grid item>
