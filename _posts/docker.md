@@ -2,8 +2,8 @@
 title: "Docker"
 excerpt: "构造镜像,运行容器,上传dockerhub"
 coverImage: "/blog/docker/docker.png"
-createdate: "2022-05-14T17:46:03.322Z"
-modifydate: "2022-06-10T10:42:03.322Z"
+createdate: "2022-05-14"
+modifydate: "2022-06-10"
 smallImage: "/blog/docker/docker-icon.svg"
 ---
 

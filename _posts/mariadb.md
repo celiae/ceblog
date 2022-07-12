@@ -2,8 +2,8 @@
 title: "Mariadb"
 excerpt: "安装 mariadb,创建用户"
 coverImage: "/blog/mariadb/mariadb.png"
-createdate: "2022-05-25T19:56:57.322Z"
-modifydate: "2022-05-25T19:56:57.322Z"
+createdate: "2022-05-25"
+modifydate: "2022-05-25"
 smallImage: "/blog/mariadb/mariadb-icon.svg"
 ---
 

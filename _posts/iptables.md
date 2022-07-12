@@ -2,8 +2,8 @@
 title: "Iptables"
 excerpt: "基本防火墙"
 coverImage: "/blog/iptables/iptables.png"
-createdate: "2022-05-22T19:56:57.322Z"
-modifydate: "2022-06-10T10:44:57.322Z"
+createdate: "2022-05-22"
+modifydate: "2022-06-10"
 smallImage: "/blog/iptables/iptables.svg"
 ---
 

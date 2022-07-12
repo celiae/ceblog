@@ -2,8 +2,8 @@
 title: "桌面"
 excerpt: "个人电脑用桌面"
 coverImage: "/blog/gnome/gnome.png"
-createdate: "2022-05-26T15:48:36.322Z"
-modifydate: "2022-06-10T10:52:36.322Z"
+createdate: "2022-05-26"
+modifydate: "2022-06-10"
 smallImage: "/blog/gnome/gnome.svg"
 ---
 

@@ -2,8 +2,8 @@
 title: "Clash"
 excerpt: "配置代理,访问真正的Internet"
 coverImage: "/blog/clash/clash.png"
-createdate: "2022-06-01T15:53:36.322Z"
-modifydate: "2022-06-10T10:51:36.322Z"
+createdate: "2022-06-01"
+modifydate: "2022-06-10"
 smallImage: "/blog/archlinux-installation/archlinux.svg"
 ---
 

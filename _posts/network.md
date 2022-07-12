@@ -2,8 +2,8 @@
 title: "Network"
 excerpt: "先启动 NetworkManager,这是前提."
 coverImage: "/blog/network-manager/network-manager.png"
-createdate: "2022-05-26T15:48:36.322Z"
-modifydate: "2022-06-13T15:48:36.322Z"
+createdate: "2022-05-26"
+modifydate: "2022-06-13"
 smallImage: "/blog/network-manager/network-manager.svg"
 ---
 

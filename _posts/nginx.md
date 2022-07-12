@@ -2,8 +2,8 @@
 title: "Nginx"
 excerpt: "下载 nginx 编辑 nginx 配置文件"
 coverImage: "/blog/nginx/nginx.png"
-createdate: "2022-05-15T14:47:47.322Z"
-modifydate: "2022-06-10T10:40:47.322Z"
+createdate: "2022-05-15"
+modifydate: "2022-06-10"
 smallImage: "/blog/nginx/nginx.svg"
 ---
 

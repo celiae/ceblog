@@ -1,14 +1,13 @@
 ---
 title: "ArchLinux"
 excerpt: "在实体机器或虚拟机上安装ArchLinux "
-coverImage: "blog/archlinux-installation/archlinux.png"
-createdate: "2022-05-14T15:48:36.322Z"
-modifydate: "2022-06-10T15:48:36.322Z"
-smallImage: "blog/archlinux-installation/archlinux.svg"
+coverImage: "/blog/archlinux-installation/archlinux.png"
+createdate: "2022-05-14"
+modifydate: "2022-06-10"
+smallImage: "/blog/archlinux-installation/archlinux.svg"
 ---
 
 ## 在实体机器上安装 ArchLinux
-
 虚拟机上的安装过程基本一样,而且更简单.设置好网络,下载好 Linux 系统镜像,不需要 U 盘就可以实现.
 
 - ### 准备工作

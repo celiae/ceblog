@@ -2,8 +2,8 @@
 title: "Git - Github"
 excerpt: "Git本地提交,上传Github"
 coverImage: "/blog/git-github/git.png"
-createdate: "2022-05-14T19:56:57.322Z"
-modifydate: "2022-06-10T10:41:57.322Z"
+createdate: "2022-05-14"
+modifydate: "2022-06-10"
 smallImage: "/blog/git-github/git-icon.svg"
 ---
 

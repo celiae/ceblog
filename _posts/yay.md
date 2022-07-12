@@ -2,8 +2,8 @@
 title: "yay"
 excerpt: "可以作为ArchLinux pacman 的替代品"
 coverImage: "/blog/yay/yay.png"
-createdate: "2022-05-26T15:48:36.322Z"
-modifydate: "2022-06-10T15:48:36.322Z"
+createdate: "2022-05-26"
+modifydate: "2022-06-10"
 smallImage: "/blog/yay/yay.svg"
 ---
 

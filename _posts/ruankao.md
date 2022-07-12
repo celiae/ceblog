@@ -2,8 +2,8 @@
 title: "软考"
 excerpt: "关于软考的小经验"
 coverImage: "/blog/ruankao/logo.png"
-createdate: "2022-06-11T12:19:47.322Z"
-modifydate: "2022-06-11T12:19:47.322Z"
+createdate: "2022-06-11"
+modifydate: "2022-06-11"
 smallImage: "/blog/archlinux-installation/archlinux.svg"
 ---
 

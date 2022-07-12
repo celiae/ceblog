@@ -2,8 +2,8 @@
 title: "Firefox"
 excerpt: "看类似经济学人(The Economist),纽约时报(NY Time)的外刊"
 coverImage: "/blog/firefox/firefox.png"
-createdate: "2022-05-26T15:48:36.322Z"
-modifydate: "2022-06-10T10:51:36.322Z"
+createdate: "2022-05-26"
+modifydate: "2022-06-10"
 smallImage: "/blog/firefox/firefox.svg"
 ---
 
