@@ -4,7 +4,6 @@ excerpt: "红米K20pro刷机(raphael)"
 coverImage: "/blog/clash/clash.png"
 createdate: "2022-06-01"
 modifydate: "2022-06-10"
-smallImage: "/blog/archlinux-installation/archlinux.svg"
 ---
 
 ## 开始刷机

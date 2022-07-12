@@ -4,7 +4,6 @@ excerpt: "可以作为ArchLinux pacman 的替代品"
 coverImage: "/blog/yay/yay.png"
 createdate: "2022-05-26"
 modifydate: "2022-06-10"
-smallImage: "/blog/yay/yay.svg"
 ---
 
 ## yay - AUR helper (AUR 包管理器)

@@ -4,7 +4,6 @@ excerpt: "配置代理,访问真正的Internet"
 coverImage: "/blog/clash/clash.png"
 createdate: "2022-06-01"
 modifydate: "2022-06-10"
-smallImage: "/blog/archlinux-installation/archlinux.svg"
 ---
 
 ## Clash 代理

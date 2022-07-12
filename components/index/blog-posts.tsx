@@ -1,17 +1,31 @@
 import * as React from "react";
 import PostPreview from "../post/post-preview";
 import Post from "../../types/post";
-import { Grid, Stack } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 
 type Props = {
   posts: Post[];
   page: number;
 };
 
-const AllStories = ({ posts, page }: Props) => {
+const BlogPosts = ({ posts = [], page = 1 }: Props) => {
   const index = (page - 1) * 3;
   const result = posts.slice(index, index + 3);
-  return (
+  return result.length === 0 ? (
+    <>
+      <Box
+        sx={{
+          backgroundColor: "warning.main",
+          color: "white",
+          padding: "1rem",
+          borderRadius: "20px",
+        }}
+      >
+        <Typography variant="h5">Sorry~ No such blog ~~</Typography>
+      </Box>
+    </>
+  ) : (
     <>
       <Stack>
         <Grid container spacing={1}>
@@ -33,4 +47,4 @@ const AllStories = ({ posts, page }: Props) => {
   );
 };
 
-export default AllStories;
+export default BlogPosts;

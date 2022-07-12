@@ -5,12 +5,41 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import { Search, SearchIconWrapper, StyledInputBase } from "./search-style";
+import {
+  startSearch,
+  stopSearch,
+  appendSearchResult,
+  emptySearchResults,
+} from "../../pages/api/state/blog-slice";
+import { useAppDispatch } from "../../pages/api/hooks";
+import Post from "../../types/post";
 
-export default function SearchAppBar() {
-  const startSearch = (
+type Props = {
+  allPosts: Post[];
+};
+
+export default function SearchAppBar({ allPosts }: Props) {
+  const dispatch = useAppDispatch();
+
+  const changeHandler = (
     event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
     let searchPattern = event.target.value;
+    if (searchPattern === "") {
+      dispatch(stopSearch());
+    } else {
+      dispatch(emptySearchResults());
+      dispatch(startSearch());
+      let searchPatternArr = searchPattern.split("");
+      let str = "(.*?)";
+      let regStr = str + searchPatternArr.join(str) + str;
+      let reg = RegExp(regStr, "i");
+      allPosts.map((post) => {
+        if (reg.test(post.title)) {
+          dispatch(appendSearchResult(post));
+        }
+      });
+    }
   };
 
   return (
@@ -22,10 +51,10 @@ export default function SearchAppBar() {
         <StyledInputBase
           autoFocus
           placeholder="Search…"
-          onChange={startSearch}
+          onChange={changeHandler}
           inputProps={{ "aria-label": "search" }}
         />
-        <Button variant="outlined">Empty</Button>
+        {/* <Button variant="outlined">Empty</Button> */}
       </Search>
     </Toolbar>
   );

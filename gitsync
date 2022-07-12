@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+eval $(ssh-agent)
+ssh-add /home/celiae/.ssh/id_ed25519
+git add -A
+git commit
+git push -u origin master:master
+
+# docker images | grep -v 'IMAGE' | grep -v 'node' | awk '{print $3}' | xargs docker image rm -f
+# docker build --cpuset-cpus 0-7 -t celiae/ceblog:latest .
+# docker push celiae/ceblog:latest

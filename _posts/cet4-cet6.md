@@ -4,7 +4,6 @@ excerpt: "四六级及格技巧"
 coverImage: "/blog/cet4-cet6/cet4.png"
 createdate: "2022-06-03"
 modifydate: "2022-06-10"
-smallImage: "/blog/cet4-cet6/cet6.png"
 ---
 
 ## 四六级

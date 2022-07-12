@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { Box } from "@mui/system";
 import { parseISO, format } from "date-fns";
 
 type Props = {
@@ -14,22 +15,12 @@ const Date = ({ msg, dateString }: Props) => {
       <Grid>
         <Grid container spacing={2}>
           <Grid item>
-            <Typography
-              variant="h5"
-              component="div"
-              gutterBottom
-              sx={{ color: "primary.main" }}
-            >
+            <Typography gutterBottom sx={{ color: "primary.main" }}>
               {msg}
             </Typography>
           </Grid>
           <Grid item>
-            <Typography
-              variant="h5"
-              component="div"
-              gutterBottom
-              sx={{ color: "secondary.main" }}
-            >
+            <Typography gutterBottom sx={{ color: "secondary.main" }}>
               <time dateTime={dateString}>{format(date, "LLLL	d, yyyy")}</time>
             </Typography>
           </Grid>

@@ -4,7 +4,6 @@ excerpt: "基本防火墙"
 coverImage: "/blog/iptables/iptables.png"
 createdate: "2022-05-22"
 modifydate: "2022-06-10"
-smallImage: "/blog/iptables/iptables.svg"
 ---
 
 ## Iptables

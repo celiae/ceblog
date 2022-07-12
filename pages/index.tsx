@@ -1,5 +1,5 @@
 import * as React from "react";
-import AllStories from "../components/index/all-stories";
+import BlogPosts from "../components/index/blog-posts";
 import { getAllPosts } from "./api/api";
 import Head from "next/head";
 import Post from "../types/post";
@@ -16,17 +16,22 @@ type Props = {
 
 const Index = ({ allPosts }: Props) => {
   const currentPage = useAppSelector((state) => state.blog.currentPage);
+  const searchActive = useAppSelector((state) => state.blog.searchActive);
+  const searchResults = useAppSelector((state) => state.blog.searchResults);
 
   return (
     <>
       <Head>
         <title>Ceblog </title>
       </Head>
-      {/* <SearchAppBar /> */}
+      <SearchAppBar allPosts={allPosts} />
       <Grid container spacing={2}>
         <Grid item xs={12} lg>
-          <AllStories posts={allPosts} page={currentPage} />
-          <BlogPagination allPosts={allPosts} />
+          {!searchActive && <BlogPosts posts={allPosts} page={currentPage} />}
+          {searchActive && (
+            <BlogPosts posts={searchResults} page={currentPage} />
+          )}
+          {!searchActive && <BlogPagination allPosts={allPosts} />}
         </Grid>
         <Grid item>
           <VerticalLinearStepper />

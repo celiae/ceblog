@@ -1,10 +1,9 @@
 ---
 title: "Virtualbox"
 excerpt: "虚拟机在arch的使用方法"
-coverImage: "/blog/ruankao/logo.png"
+coverImage: "/blog/virtualbox/virtualbox.png"
 createdate: "2022-07-08"
 modifydate: "2022-07-08"
-smallImage: "/blog/archlinux-installation/archlinux.svg"
 ---
 
 ## Virtualbox

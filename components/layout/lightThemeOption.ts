@@ -21,7 +21,7 @@ export const lightThemeOption: ThemeOptions = {
       main: red[500],
     },
     warning: {
-      main: amber[500],
+      main: amber[600],
     },
     info: {
       main: cyan[500],

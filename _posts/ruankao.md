@@ -4,7 +4,6 @@ excerpt: "关于软考的小经验"
 coverImage: "/blog/ruankao/logo.png"
 createdate: "2022-06-11"
 modifydate: "2022-06-11"
-smallImage: "/blog/archlinux-installation/archlinux.svg"
 ---
 
 ## 全国计算机技术与软件专业技术资格考试

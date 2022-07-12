@@ -10,7 +10,7 @@ type ImageTitle = {
   smallImage: string;
 };
 
-const ImageTitle = ({ title, smallImage }: ImageTitle) => {
+const ImageTitle = ({ title, smallImage = "/vercel.svg" }: ImageTitle) => {
   return (
     <>
       <Grid container spacing={3}>
