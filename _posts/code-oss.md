@@ -1,10 +1,10 @@
 ---
 title: "Code-OSS"
 excerpt: "VSCode开源版本,使用前端语言编写而成的IDE"
-coverImage: "/assets/blog/code-oss/code-oss.png"
+coverImage: "/blog/code-oss/code-oss.png"
 createdate: "2022-05-26T15:48:36.322Z"
 modifydate: "2022-07-08T15:48:36.322Z"
-smallImage: "/assets/blog/code-oss/code-oss.svg"
+smallImage: "/blog/code-oss/code-oss.svg"
 ---
 
 ## Code-OSS

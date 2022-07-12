@@ -1,10 +1,10 @@
 ---
 title: "ArchLinux"
 excerpt: "在实体机器或虚拟机上安装ArchLinux "
-coverImage: "/assets/blog/archlinux-installation/archlinux.png"
+coverImage: "blog/archlinux-installation/archlinux.png"
 createdate: "2022-05-14T15:48:36.322Z"
 modifydate: "2022-06-10T15:48:36.322Z"
-smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
+smallImage: "blog/archlinux-installation/archlinux.svg"
 ---
 
 ## 在实体机器上安装 ArchLinux
@@ -133,7 +133,8 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
   - 是否为 UEFI 启动,有文件则是,空则是普通 BIOS
 
-    > 目前大多数PC都是UEFI模式，所以下面的一些步骤主要针对UEFI系统的安装
+    > 目前大多数 PC 都是 UEFI 模式，所以下面的一些步骤主要针对 UEFI 系统的安装
+
     ```console
     ls /sys/firmware/efi/efivars
     ```
@@ -146,12 +147,12 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
   - cfdisk 工具操作磁盘, 磁盘文件"/dev/nvme0n1"根据自己的情况进行修改
 
-    | 挂载点         | 磁盘        | 大小 |
-    | ------------- | ----------- | ---- |
-    | /mnt/boot/efi | /dev/`sda1` | > 60M |
-    |               | /dev/`sda2` | 1G   |
-    | /mnt          | /dev/`sda3` | > 20G  |
-    | /mnt/home     | /dev/`sda4` | 剩余所有空间     |
+    | 挂载点        | 磁盘        | 大小         |
+    | ------------- | ----------- | ------------ |
+    | /mnt/boot/efi | /dev/`sda1` | > 60M        |
+    |               | /dev/`sda2` | 1G           |
+    | /mnt          | /dev/`sda3` | > 20G        |
+    | /mnt/home     | /dev/`sda4` | 剩余所有空间 |
 
     ```console
     cfdisk /dev/sda
@@ -159,9 +160,9 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
     **看清自己的磁盘设备文件名,有的是`nvme0n1p1`,有的是`sda1`**
 
-  - **已有windows情况下不用这一步**:格式化 grub 启动分区
+  - **已有 windows 情况下不用这一步**:格式化 grub 启动分区
 
-    > Windows 系统自带efi分区,直接挂载即可
+    > Windows 系统自带 efi 分区,直接挂载即可
 
     ```console
     mkfs.vfat /dev/sda1
@@ -203,13 +204,13 @@ smallImage: "/assets/blog/archlinux-installation/archlinux.svg"
 
     桌面安装:`三选一`,三条命令中任选一行,同时安装多个图形界面容易引起系统混乱
 
-    >kde丰富花哨, gnome简洁易用, xfce不大不小
+    > kde 丰富花哨, gnome 简洁易用, xfce 不大不小
 
-     ```console
+    ```console
     pacstrap /mnt plasma
     pacstrap /mnt gnome
     pacstrap /mnt xfce4 lightdm lightdm-gtk-greeter
-     ```
+    ```
 
   - 启动时自动挂载主分区
 

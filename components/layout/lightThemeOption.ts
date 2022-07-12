@@ -29,9 +29,9 @@ export const lightThemeOption: ThemeOptions = {
     success: {
       main: green[600],
     },
-    background: {
-      default: orange[600],
-    },
+    // background: {
+    //   default: orange[600],
+    // },
     text: {
       primary: grey[900],
     },

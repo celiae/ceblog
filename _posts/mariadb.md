@@ -1,10 +1,10 @@
 ---
 title: "Mariadb"
 excerpt: "安装 mariadb,创建用户"
-coverImage: "/assets/blog/mariadb/mariadb.png"
+coverImage: "/blog/mariadb/mariadb.png"
 createdate: "2022-05-25T19:56:57.322Z"
 modifydate: "2022-05-25T19:56:57.322Z"
-smallImage: "/assets/blog/mariadb/mariadb-icon.svg"
+smallImage: "/blog/mariadb/mariadb-icon.svg"
 ---
 
 ## ArchWiki

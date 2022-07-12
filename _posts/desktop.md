@@ -1,10 +1,10 @@
 ---
 title: "桌面"
 excerpt: "个人电脑用桌面"
-coverImage: "/assets/blog/gnome/gnome.png"
+coverImage: "/blog/gnome/gnome.png"
 createdate: "2022-05-26T15:48:36.322Z"
 modifydate: "2022-06-10T10:52:36.322Z"
-smallImage: "/assets/blog/gnome/gnome.svg"
+smallImage: "/blog/gnome/gnome.svg"
 ---
 
 ## 图形桌面
@@ -13,14 +13,14 @@ smallImage: "/assets/blog/gnome/gnome.svg"
 
   一般 Linux 运行在服务器上,而服务器不需要桌面提供友好界面.例如在云服务器里的 Linux 只用命令行执行脚本负责开启一个容器或服务即可;可在个人电脑,光用 vim 写代码可能有点费手.在软件工程里讲究的就是重用模块,有的操作不必每次都要敲命令.个人观点,图形界面从某种意义上讲也是重用模块,解偶,减少重复工作.
 
-- GNOME 
-  
+- GNOME
+
   **优点**
 
   1. 系统设置简洁.可轻易设置系统代理,一般应用都会走.
-  2. UI很酷,界面文字描述言简意赅.
+  2. UI 很酷,界面文字描述言简意赅.
   3. 动画流畅
-   
+
   **缺点**
 
   1. 系统快捷键会与某些软件冲突
@@ -36,6 +36,7 @@ smallImage: "/assets/blog/gnome/gnome.svg"
   3. 具有大量自带软件
 
   **缺点**
+
   1. 同时也很复杂
   2. 占用空间大
   3. 过于花哨

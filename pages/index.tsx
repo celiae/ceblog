@@ -22,7 +22,7 @@ const Index = ({ allPosts }: Props) => {
       <Head>
         <title>Ceblog </title>
       </Head>
-      <SearchAppBar />
+      {/* <SearchAppBar /> */}
       <Grid container spacing={2}>
         <Grid item xs={12} lg>
           <AllStories posts={allPosts} page={currentPage} />
@@ -30,7 +30,7 @@ const Index = ({ allPosts }: Props) => {
         </Grid>
         <Grid item>
           <VerticalLinearStepper />
-          <CeblogAnimate />
+          {/* <CeblogAnimate /> */}
         </Grid>
       </Grid>
     </>

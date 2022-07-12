@@ -1,10 +1,10 @@
 ---
 title: "Git - Github"
 excerpt: "Git本地提交,上传Github"
-coverImage: "/assets/blog/git-github/git.png"
+coverImage: "/blog/git-github/git.png"
 createdate: "2022-05-14T19:56:57.322Z"
 modifydate: "2022-06-10T10:41:57.322Z"
-smallImage: "/assets/blog/git-github/git-icon.svg"
+smallImage: "/blog/git-github/git-icon.svg"
 ---
 
 ## Git Github 的使用方法
@@ -21,7 +21,7 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
 
 1. 在项目根文件夹下,新建仓库.敲完后项目文件夹产生一个.git 文件夹.
 
-   >先赐予当前目录版本控制系统
+   > 先赐予当前目录版本控制系统
 
    ```console
    git init
@@ -29,7 +29,7 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
 
 2. 将项目里的所有文件(-A)添加到暂存区(stage). -A:代指当前文件夹下所有文件
 
-   >觉得代码写的有一定数量了
+   > 觉得代码写的有一定数量了
 
    ```console
    git add -A
@@ -37,7 +37,7 @@ smallImage: "/assets/blog/git-github/git-icon.svg"
 
 3. 接下来提交暂存区里的内容到仓库(repo)他会打开系统默认文本编辑器,根据提示写下更新注释,保存退出.如果环境变量 EDITOR=vim,他就打开 vim.
 
-   >代码完成，功能测试完毕
+   > 代码完成，功能测试完毕
 
    ```console
    git commit
