@@ -20,10 +20,6 @@ const pages = [
     name: "Links",
     url: "/links",
   },
-  {
-    name: "Framework",
-    url: "/framework",
-  },
 ];
 
 const AppBarMenu = () => {

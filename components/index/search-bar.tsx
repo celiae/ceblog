@@ -49,8 +49,7 @@ export default function SearchAppBar({ allPosts }: Props) {
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
-          autoFocus
-          placeholder="Search…"
+          placeholder="Search Blog Title…"
           onChange={changeHandler}
           inputProps={{ "aria-label": "search" }}
         />

@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
 import links from "./links.json";
+import frameworks from "./frameworks.json";
 
 const others = () => {
   return (
@@ -14,11 +15,12 @@ const others = () => {
       <Head>
         <title>Links</title>
       </Head>
+      <Typography variant="h4">友情链接</Typography>
       <Grid
         container
         justifyContent="center"
         alignItems="center"
-        marginTop={5}
+        marginBottom={6}
         spacing={2}
       >
         {links.map((link) => (
@@ -26,11 +28,6 @@ const others = () => {
             <Grid item>
               <Card sx={{ minWidth: 345 }}>
                 <CardActionArea>
-                  {/* <CardMedia
-                    component="img"
-                    image={link.image}
-                    alt={link.imageAlt}
-                  /> */}
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                       {link.name}
@@ -49,6 +46,31 @@ const others = () => {
             </Grid>
           </Link>
         ))}
+      </Grid>
+      <Typography variant="h4">知名框架</Typography>
+      <Grid>
+        <Grid container spacing={2}>
+          {frameworks.map((framework) => (
+            <Grid item key={framework.name}>
+              <Card sx={{ minWidth: 150 }} variant="outlined">
+                <CardContent>
+                  <Typography variant="h5" component="div">
+                    {framework.name}
+                  </Typography>
+                  <Typography variant="body2">
+                    Web Framework
+                    <br />
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Link href={framework.url}>
+                    <Button size="small">Learn More</Button>
+                  </Link>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </>
   );

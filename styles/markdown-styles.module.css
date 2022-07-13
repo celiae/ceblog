@@ -13,6 +13,7 @@
   color: rgb(255, 255, 255);
   overflow: auto;
   padding: 10px;
+  max-width: fit-content;
 }
 .markdown code {
   font-size: 1.3rem;
@@ -52,4 +53,17 @@
 }
 .markdown p > code {
   color: rgb(3, 129, 255);
+}
+.markdown blockquote{
+  border-left: 3px solid #0095ff;
+  background-color: #ceeaff;
+  border-top-right-radius: 20px;
+}
+
+/* max:  <=500px */
+/* min:  >=500px */
+@media only screen and (max-width: 500px) {
+  .markdown ul {
+    padding-left: 1rem;
+  }
 }
