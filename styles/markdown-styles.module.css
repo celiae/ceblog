@@ -1,0 +1,74 @@
+.markdown {
+  margin-bottom: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.markdown p {
+  margin: 0;
+  padding: 5px 0 1px 5px;
+  font-size: 1.3rem;
+}
+.markdown pre {
+  border-radius: 10px;
+  background: rgb(37, 37, 37);
+  color: rgb(255, 255, 255);
+  overflow: auto;
+  padding: 10px;
+  max-width: fit-content;
+}
+.markdown code {
+  font-size: 1.3rem;
+  font-family: "Source Code Pro";
+}
+.markdown h2 {
+  font-size: 2rem;
+  color: #0095ff;
+}
+.markdown h3 {
+  font-size: 1.5rem;
+}
+.markdown h4 {
+  font-size: 1.2rem;
+}
+.markdown h5 {
+  font-size: 1rem;
+}
+
+.markdown a {
+  color: #258bd3;
+  padding: 0.5rem;
+}
+.markdown a:hover {
+  color: #0070c1;
+}
+.markdown ol {
+  border-bottom: 2px solid var(--white);
+}
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem;
+}
+.markdown table,.markdown th,.markdown td {
+  border: 1px solid #6ec1fc;
+}
+.markdown td {
+  text-align: center;
+  padding: 1rem 3rem 1rem 0rem;
+}
+.markdown p > code {
+  color: rgb(3, 129, 255);
+}
+.markdown blockquote{
+  border-left: 3px solid #0095ff;
+  border-top-right-radius: 20px;
+  font-size: smaller;
+  font-style: italic;
+}
+
+/* max:  <=500px */
+/* min:  >=500px */
+@media only screen and (max-width: 500px) {
+  .markdown ul {
+    padding-left: 1rem;
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ArchLinuxStudio",
+    "url": "https://archlinuxstudio.github.io",
+    "description": "专注于ArchLinux的技术文章",
+    "image": "/blog/archlinux-installation/archlinux.svg",
+    "imageAlt": "ArchLinuxStudio"
+  },
+  {
+    "name": "Sukka",
+    "url": "https://blog.skk.moe/",
+    "description": "Web技术",
+    "image": "/blog/archlinux-installation/archlinux.svg",
+    "imageAlt": "Sukka"
+  },
+  {
+    "name": "Balthild's Blog",
+    "url": "https://blog.skk.moe/",
+    "description": "科技文学",
+    "image": "/blog/archlinux-installation/archlinux.svg",
+    "imageAlt": "Balthild's Blog"
+  },
+  {
+    "name": "方增烨 Leo",
+    "url": "http://www.fangzengye.com/",
+    "description": "学者",
+    "image": "/blog/archlinux-installation/archlinux.svg",
+    "imageAlt": "Balthild's Blog"
+  },
+  {
+    "name": "Hi,DIYgod",
+    "url": "https://diygod.me/",
+    "description": "RSS3大佬",
+    "image": "/blog/archlinux-installation/archlinux.svg",
+    "imageAlt": "Balthild's Blog"
+  },
+  {
+    "name": "depy",
+    "url": "https://blog.happysec.cn/",
+    "description": "网络安全",
+    "image": "/blog/archlinux-installation/archlinux.svg",
+    "imageAlt": "Balthild's Blog"
+  }
+]

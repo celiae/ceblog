@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Vue.js",
+    "url": "https://vuejs.org/"
+  },
+  {
+    "name": "React.js",
+    "url": "https://reactjs.org/"
+  },
+  {
+    "name": "Next.js",
+    "url": "https://nextjs.org/"
+  },
+  {
+    "name": "Django",
+    "url": "https://www.djangoproject.com/"
+  },
+  {
+    "name": "Laravel",
+    "url": "https://laravel.com/"
+  },
+  {
+    "name": "Express.js",
+    "url": "https://expressjs.com/"
+  },
+  {
+    "name": "Material ui",
+    "url": "https://mui.com"
+  }
+]
