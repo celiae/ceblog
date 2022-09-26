@@ -11,7 +11,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useAppSelector } from "../../pages/api/hooks";
 import { lightThemeOption } from "./lightThemeOption";
 import { darkThemeOption } from "./darkThemeOption";
-import { Paper, Toolbar } from "@mui/material";
+import { CssBaseline, Paper, Toolbar } from "@mui/material";
 
 interface ScrollTop {
   props: any;
@@ -33,6 +33,7 @@ const Layout = (
     <>
       <ThemeProvider theme={theme}>
         <Meta />
+        <CssBaseline />
         <Paper>
           <AppBarMenu />
           <Toolbar id="back-to-top-anchor" />
