@@ -1,0 +1,32 @@
+.categoryWrapper {
+  display: flex;
+  gap: 1rem;
+  padding: 0.2rem 1rem;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+.categoryWrapper:hover {
+  padding: 0.3rem 1rem;
+  background: #c4c4c4;
+}
+.smallBox {
+  cursor: pointer;
+  padding-inline: 1rem;
+}
+.smallBox:hover {
+  text-decoration: underline;
+}
+.postItem {
+  height: 6rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.3s;
+  background: #eeeeee;
+  box-shadow: 0 2px 8px #afafaf;
+  margin: 0.2rem 0;
+}
+.postItem:hover {
+  background: #b0f3ff;
+}

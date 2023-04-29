@@ -1,0 +1,12 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+  color: white;
+}
+.search:hover {
+  background: #272727;
+  text-decoration: underline;
+  text-decoration-color: rgb(78, 197, 252);
+}

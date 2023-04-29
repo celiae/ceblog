@@ -1,0 +1,11 @@
+.menu {
+  position: fixed;
+  font-size: large;
+  font-weight: bold;
+  bottom: 2rem;
+  cursor: pointer;
+  z-index: 30;
+  transition: all 0.2s;
+  background: white;
+  color: rgb(83, 172, 255);
+}

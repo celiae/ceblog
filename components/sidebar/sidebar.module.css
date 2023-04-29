@@ -1,0 +1,36 @@
+.sidebar {
+  --var: 20rem;
+  position: fixed;
+  z-index: 20;
+  width: 20rem;
+  height: 100vh;
+  padding: 0.5rem;
+  background: #fff;
+}
+.sidebarShow {
+  transform: translate(0);
+  transition: transform 0.3s;
+}
+.sidebarHidden {
+  transform: translate(-20rem);
+  transition: transform 0.3s;
+}
+.navItem {
+  font-size: larger;
+  color: aliceblue;
+  background: #686f70;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navItem:hover {
+  color: cyan;
+}
+.active {
+  background: #55b3e9;
+}

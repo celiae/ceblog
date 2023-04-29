@@ -1,0 +1,10 @@
+.navItem {
+  font-size: large;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

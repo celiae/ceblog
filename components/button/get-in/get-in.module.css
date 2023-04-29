@@ -1,0 +1,38 @@
+.buttonSky {
+  background: rgb(0, 175, 245);
+  color: white;
+  padding: 0.2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.7rem;
+  transition: all 0.2s;
+  border: 2px solid white;
+}
+.buttonSky:hover {
+  background: #222222;
+  padding-inline: 1.5rem;
+}
+.spotWrapper {
+  position: relative;
+  display: flex;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+.outterSpot {
+  position: absolute;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 0.75;
+  background: #6affa8;
+}
+.innerSpot {
+  position: relative;
+  display: inline-flex;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background: #ffffff;
+}

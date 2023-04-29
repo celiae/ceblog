@@ -1,0 +1,29 @@
+.imgBox {
+  margin: 1rem 0;
+  padding: 2rem;
+  height: 15rem;
+  background: url("/code.png");
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+.greetingWrapper {
+  padding: 1rem 2rem;
+  background: #e9e9e9;
+}
+.searchInput {
+  background: #d6d6d6;
+  border-radius: 0.5rem;
+  outline: none;
+  padding-inline: 1rem;
+}
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+}
+.inputContainer {
+  margin-top: 1rem;
+  padding: 2rem;
+  box-shadow: 3px 3px 1rem 0 #808080;
+}
